@@ -28,18 +28,27 @@ const HowItWorks: React.FC = () => (
       display="block"
       maxW="max-content"
       mx="auto"
-      fontSize="32px"
+      fontSize={{ base: '2xl', md: '32px' }}
       fontWeight="500"
-      mb="30px"
+      mb={{ md: '20px', lg: '30px' }}
     >
       How it works
     </Text>
     <Grid
-      templateColumns="repeat(3, 1fr)"
+      templateColumns={{
+        base: 'repeat(1, minmax(315px,600px))',
+        lg: 'repeat(3, 1fr)',
+      }}
       borderRadius="15px"
-      backgroundColor="base-dark-green"
+      backgroundColor={{
+        base: 'transparent',
+        lg: 'base-dark-green',
+      }}
+      maxW="max-content"
+      mx={{ base: 'auto', lg: '0px' }}
       p="20px"
       columnGap="20px"
+      rowGap={{ base: '20px', lg: '0px' }}
     >
       {steps.map((s, i) => (
         <Box
@@ -54,7 +63,7 @@ const HowItWorks: React.FC = () => (
           <Text
             as="span"
             fontWeight="500"
-            fontSize="2xl"
+            fontSize={{ base: 'xl', md: '2xl' }}
             lineHeight="30px"
             textAlign="center"
             display="block"

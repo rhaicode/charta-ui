@@ -8,16 +8,28 @@ const CallToAction: React.FC = () => (
     justifyContent="center"
     alignItems="center"
     backgroundColor="base-light-green-2"
-    pt="82px"
-    py="78px"
+    py={{ base: '24px', md: '56px', lg: '78px' }}
+    px={{ base: '25px', md: '0px' }}
     borderRadius="15px"
-    mt="150px"
-    mb="120px"
+    mt={{ base: '50px', md: '100px', lg: '150px' }}
+    mb={{ base: '60px', md: '80px', lg: '120px' }}
   >
-    <Text as="span" fontWeight="500" fontSize="40px" lineHeight="47px">
-      Move at the speed of argument
+    <Text
+      as="span"
+      fontWeight="500"
+      fontSize={{ base: '30px', md: '36px', lg: '40px' }}
+      lineHeight="47px"
+      textAlign="center"
+      maxW={{ base: '14ch', md: 'full' }}
+    >
+      Move at the speed of agreement
     </Text>
-    <ChartaButton px="3rem" mt="2.25rem">
+    <ChartaButton
+      px="3rem"
+      py={{ base: '1.5rem', md: '1.25rem' }}
+      mt={{ base: '1rem', md: '2.25rem' }}
+      w={{ base: 'full', md: 'auto' }}
+    >
       Get started
     </ChartaButton>
   </Flex>

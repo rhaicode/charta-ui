@@ -9,8 +9,13 @@ import CallToAction from '../components/Landing/CallToAction';
 import Footer from '../components/common/Footer';
 
 const Landing: React.FC = () => (
-  <Box backgroundColor="base-dark-green-1" minH="100vh" pt="27px" color="white">
-    <Container maxW="container.xl">
+  <Box
+    backgroundColor="base-dark-green-1"
+    minH="100vh"
+    pt={{ base: '12px', md: '27px' }}
+    color="white"
+  >
+    <Container maxW="container.xl" overflowX="hidden">
       <Navbar />
       <Hero />
       <HowItWorks />
