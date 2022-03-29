@@ -10,6 +10,7 @@ const theme = extendTheme({
     'base-gray': '#ADC3AB',
     'base-peach': '#CD9761',
     'base-peach-btn': '#CD955D',
+    'base-gold': '#D7A163',
     'base-dark-green': '#234034',
     'base-light-green': '#395348',
     'base-light-green-2': '#375147',

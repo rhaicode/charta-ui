@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react';
 import ChartaButton from './ChartaButton';
 
-const Navbar: React.FC = () => (
+const Navbar: React.FC<{ noHamburger?: boolean }> = ({ noHamburger }) => (
   <Flex
     color="#fff"
     justifyContent={{ base: 'center', md: 'space-between' }}
@@ -38,23 +38,25 @@ const Navbar: React.FC = () => (
       </Button>
       <ChartaButton px="2rem">Get started</ChartaButton>
     </Flex>
-    <Box pos="absolute" left="0px" top="4px">
-      <Menu>
-        <MenuButton
-          as={IconButton}
-          aria-label="Options"
-          display={{ md: 'none' }}
-          variant="outline"
-          icon={<Image src="./assets/hamburger-icon.png" mx="auto" />}
-          borderColor="transparent"
-        />
-        <MenuList>
-          <MenuItem icon={<AddIcon />} command="⌘T">
-            New Tab
-          </MenuItem>
-        </MenuList>
-      </Menu>
-    </Box>
+    {!noHamburger && (
+      <Box pos="absolute" left="0px" top="4px">
+        <Menu>
+          <MenuButton
+            as={IconButton}
+            aria-label="Options"
+            display={{ md: 'none' }}
+            variant="outline"
+            icon={<Image src="./assets/hamburger-icon.png" mx="auto" />}
+            borderColor="transparent"
+          />
+          <MenuList>
+            <MenuItem icon={<AddIcon />} command="⌘T">
+              New Tab
+            </MenuItem>
+          </MenuList>
+        </Menu>
+      </Box>
+    )}
   </Flex>
 );
 

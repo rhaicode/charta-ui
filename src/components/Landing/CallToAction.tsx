@@ -12,7 +12,6 @@ const CallToAction: React.FC = () => (
     px={{ base: '25px', md: '0px' }}
     borderRadius="15px"
     mt={{ base: '50px', md: '100px', lg: '150px' }}
-    mb={{ base: '60px', md: '80px', lg: '120px' }}
   >
     <Text
       as="span"

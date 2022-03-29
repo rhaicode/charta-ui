@@ -11,8 +11,9 @@ import Footer from '../components/common/Footer';
 const Landing: React.FC = () => (
   <Box
     backgroundColor="base-dark-green-1"
-    minH="100vh"
+    position="relative"
     pt={{ base: '12px', md: '27px' }}
+    pb={{ base: '16rem', md: '16rem' }}
     color="white"
   >
     <Container maxW="container.xl" overflowX="hidden">
