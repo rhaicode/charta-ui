@@ -10,6 +10,7 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 import ChartaButton from '../components/common/ChartaButton';
 
 import Footer from '../components/common/Footer';
@@ -53,7 +54,15 @@ const Signup: React.FC = () => {
               <FormLabel fontWeight="400" fontSize="14px">
                 Email address
               </FormLabel>
-              <Input type="email" placeholder="Enter email" mt="-0.5rem" />
+              <Input
+                type="email"
+                placeholder="Enter email"
+                mt="-0.5rem"
+                _placeholder={{
+                  color: '#FFFFFF',
+                  opacity: '0.6',
+                }}
+              />
             </FormControl>
             <FormControl mt="40px">
               <FormLabel fontWeight="400" fontSize="14px">
@@ -63,6 +72,10 @@ const Signup: React.FC = () => {
                 <Input
                   type="password"
                   placeholder="Enter password"
+                  _placeholder={{
+                    color: '#FFFFFF',
+                    opacity: '0.6',
+                  }}
                   mt="-0.5rem"
                 />
                 <Box position="absolute" right="0px">
@@ -98,6 +111,10 @@ const Signup: React.FC = () => {
                 <Input
                   type="password"
                   placeholder="Re-enter password"
+                  _placeholder={{
+                    color: '#FFFFFF',
+                    opacity: '0.6',
+                  }}
                   mt="-0.5rem"
                 />
                 <Box position="absolute" right="0px">
@@ -125,9 +142,11 @@ const Signup: React.FC = () => {
                 </Box>
               </Flex>
             </FormControl>
-            <ChartaButton w="full" mt="40px">
-              Log in
-            </ChartaButton>
+            <Link to="/get-started">
+              <ChartaButton w="full" mt="40px">
+                Sign up
+              </ChartaButton>
+            </Link>
           </form>
           <Text as="p" w={{ base: '20ch', md: 'full' }} mx="auto" mt="30px">
             Already have an account?{' '}

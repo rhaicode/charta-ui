@@ -10,6 +10,7 @@ import {
   MenuList,
   Box,
 } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 import ChartaButton from './ChartaButton';
 
 const Navbar: React.FC<{ noHamburger?: boolean }> = ({ noHamburger }) => (
@@ -20,23 +21,32 @@ const Navbar: React.FC<{ noHamburger?: boolean }> = ({ noHamburger }) => (
     alignItems="center"
     h={{ base: '45px', md: '60px' }}
   >
-    <Image
-      display={{ md: 'none' }}
-      src="./assets/charta-logo-mobile.png"
-      alignSelf="center"
-      alt="charta-logo"
-    />
-    <Image
-      display={{ base: 'none', md: 'block' }}
-      src="./assets/charta-logo.png"
-      alignSelf="center"
-      alt="charta-logo"
-    />
+    <Link to="/">
+      <Image
+        display={{ md: 'none' }}
+        src="/assets/charta-logo-mobile.png"
+        alignSelf="center"
+        alt="charta-logo"
+      />
+      <Image
+        display={{ base: 'none', md: 'block' }}
+        src="/assets/charta-logo.png"
+        alignSelf="center"
+        alt="charta-logo"
+      />
+    </Link>
+
     <Flex display={{ base: 'none', md: 'flex' }}>
-      <Button variant="ghost" fontWeight="500" mr="24px">
-        Login
-      </Button>
-      <ChartaButton px="2rem">Get started</ChartaButton>
+      <Box mr="24px">
+        <Link to="/login">
+          <Button variant="ghost" fontWeight="500">
+            Login
+          </Button>
+        </Link>
+      </Box>
+      <Link to="/signup">
+        <ChartaButton px="2rem">Get started</ChartaButton>
+      </Link>
     </Flex>
     {!noHamburger && (
       <Box pos="absolute" left="0px" top="4px">
@@ -46,7 +56,7 @@ const Navbar: React.FC<{ noHamburger?: boolean }> = ({ noHamburger }) => (
             aria-label="Options"
             display={{ md: 'none' }}
             variant="outline"
-            icon={<Image src="./assets/hamburger-icon.png" mx="auto" />}
+            icon={<Image src="/assets/hamburger-icon.png" mx="auto" />}
             borderColor="transparent"
           />
           <MenuList>

@@ -14,6 +14,9 @@ const theme = extendTheme({
     'base-dark-green': '#234034',
     'base-light-green': '#395348',
     'base-light-green-2': '#375147',
+    'base-primary-green': '#323D5D',
+    'base-secondary-green': '#3C586B',
+    'base-gray-2': '#6A6A74',
   },
   fontSizes: {
     'xs-11': '0.6875rem', // 11px

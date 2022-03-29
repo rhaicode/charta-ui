@@ -48,7 +48,15 @@ const Login: React.FC = () => {
               <FormLabel fontWeight="400" fontSize="14px">
                 Email address
               </FormLabel>
-              <Input type="email" placeholder="Enter email" mt="-0.5rem" />
+              <Input
+                type="email"
+                placeholder="Enter email"
+                mt="-0.5rem"
+                _placeholder={{
+                  color: '#FFFFFF',
+                  opacity: '0.6',
+                }}
+              />
             </FormControl>
             <FormControl mt="40px">
               <FormLabel fontWeight="400" fontSize="14px">
@@ -59,6 +67,10 @@ const Login: React.FC = () => {
                   type="password"
                   placeholder="Enter password"
                   mt="-0.5rem"
+                  _placeholder={{
+                    color: '#FFFFFF',
+                    opacity: '0.6',
+                  }}
                 />
                 <Box position="absolute" right="0px">
                   {isOpen ? (
@@ -85,6 +97,7 @@ const Login: React.FC = () => {
                 </Box>
               </Flex>
             </FormControl>
+
             <ChartaButton w="full" mt="40px">
               Log in
             </ChartaButton>
