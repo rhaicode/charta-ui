@@ -1,10 +1,15 @@
 import { Box, Flex, Container } from '@chakra-ui/react';
 import React from 'react';
 import Navbar from '../components/common/Navbar';
-import GetStarted from '../components/Steps/GetStarted';
+import GetStarted from '../components/QuestionStepThrough/GetStarted';
 
 const GetStartedPage: React.FC = () => (
-  <Box minH="100vh" position="relative" backgroundColor="#E5E5E5" pb="65px">
+  <Box
+    minH="100vh"
+    position="relative"
+    backgroundColor="#E5E5E5"
+    pb={{ md: '65px' }}
+  >
     <Flex backgroundColor="base-secondary-green">
       <Container maxW="container.xl" overflow="hidden">
         <Navbar />

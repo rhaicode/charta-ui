@@ -11,11 +11,13 @@ import '@fontsource/rubik/700.css';
 
 import App from './App';
 import theme from './theme';
+import ScrollToTop from './components/common/ScrollToTop';
 
 ReactDOM.render(
   <React.StrictMode>
     <ChakraProvider theme={theme} resetCSS>
       <Router>
+        <ScrollToTop />
         <App />
       </Router>
     </ChakraProvider>
