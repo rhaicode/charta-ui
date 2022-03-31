@@ -26,6 +26,7 @@ export const defaultOnboardedUser: OnboardedUser = {
   type: 'NONE',
   step: 0,
   subStep: 0,
+  prevSubStep: 0,
 };
 
 export const onboardedUserAtomPersist = atomWithLocalStorage<OnboardedUser>(

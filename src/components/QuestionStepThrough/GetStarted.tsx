@@ -152,7 +152,7 @@ const HeresHowItWorks: React.FC = () => {
             w={{ base: 'full', md: '223px' }}
             py="1.5rem"
             onClick={() => {
-              setOnBoardedUser({ ...onboardedUser, step: 1 });
+              setOnBoardedUser({ ...onboardedUser, step: 1, subStep: 1 });
               history.push('/step-through');
             }}
           >

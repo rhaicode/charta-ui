@@ -94,6 +94,7 @@
     "react/jsx-curly-newline": "off",
     "react/jsx-wrap-multilines": "off",
     "react/function-component-definition": "off",
-    "react/jsx-closing-bracket-location": "off"
+    "react/jsx-closing-bracket-location": "off",
+    "react/require-default-props": "off"
   }
 }

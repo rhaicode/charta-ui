@@ -7,13 +7,13 @@ import {
   Flex,
   useDisclosure,
   Button,
+  Input,
 } from '@chakra-ui/react';
 import React from 'react';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 import ChartaButton from '../components/common/ChartaButton';
 
 import Footer from '../components/common/Footer';
-import Input from '../components/common/Input';
 import Navbar from '../components/common/Navbar';
 
 const Login: React.FC = () => {

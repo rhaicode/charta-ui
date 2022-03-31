@@ -1,17 +1,24 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
 import { useAtom } from 'jotai';
-import React from 'react';
+import React, { JSXElementConstructor, ReactElement, ReactNode } from 'react';
 import { FiChevronLeft } from 'react-icons/fi';
 import { useHistory } from 'react-router-dom';
 import { onboardedUserAtomPersist } from '../../../atoms';
+import DottedBreadCrumb from '../../common/DottedBreadCrumb';
 
-const stepsComponent: Record<number, any> = {
+import TheBasics from './TheBasics';
+
+const stepsComponent: Record<
+  number,
+  { name: string; alternateName?: string; component: ReactNode }
+> = {
   1: {
     name: 'The Basics',
-    component: <Box />,
+    component: <TheBasics />,
   },
   2: {
     name: 'Song Information',
+    alternateName: 'Song Info',
     component: <Box />,
   },
   3: {
@@ -34,7 +41,7 @@ const stepsComponent: Record<number, any> = {
 
 const ArtistSteps: React.FC = () => {
   const history = useHistory();
-  const [onboardedUser] = useAtom(onboardedUserAtomPersist);
+  const [onboardedUser, setOnboardedUser] = useAtom(onboardedUserAtomPersist);
 
   return (
     <Box p={{ base: '30px', md: '40px' }} color="base-primary-green">
@@ -58,16 +65,31 @@ const ArtistSteps: React.FC = () => {
           mb="2px"
           color="base-primary-green"
           onClick={() => {
-            if (onboardedUser.step === 1) {
+            if (onboardedUser.step === 1 && +onboardedUser.subStep === 1) {
               history.push('/get-started');
             } else {
-              history.push(`/step-through/${onboardedUser.step - 1}`);
+              setOnboardedUser({
+                ...onboardedUser,
+                step: onboardedUser.step,
+                subStep:
+                  onboardedUser.prevSubStep !== '0'
+                    ? onboardedUser.prevSubStep
+                    : +onboardedUser.subStep - 1,
+                prevSubStep: '0',
+              });
             }
           }}
         >
           <FiChevronLeft fontSize="20px" cursor="pointer" />
         </Box>
       </Flex>
+      <DottedBreadCrumb steps={stepsComponent} mt="24px" />
+      {React.cloneElement(
+        stepsComponent[onboardedUser.step].component as ReactElement<
+          any,
+          string | JSXElementConstructor<any>
+        >
+      )}
     </Box>
   );
 };

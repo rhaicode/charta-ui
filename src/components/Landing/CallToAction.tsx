@@ -29,7 +29,7 @@ const CallToAction: React.FC = () => (
       mt={{ base: '1rem', md: '2.25rem' }}
       w={{ base: 'full', md: 'auto' }}
     >
-      Get started
+      Sign up
     </ChartaButton>
   </Flex>
 );

@@ -10,7 +10,12 @@ const StepThrough: React.FC = () => {
   const [onboardedUser] = useAtom(onboardedUserAtomPersist);
 
   return (
-    <Box minH="100vh" position="relative" backgroundColor="#E5E5E5" pb="65px">
+    <Box
+      minH="100vh"
+      position="relative"
+      backgroundColor="#E5E5E5"
+      pb={{ md: '65px' }}
+    >
       <Flex backgroundColor="base-secondary-green">
         <Container maxW="container.xl" overflow="hidden">
           <Navbar />

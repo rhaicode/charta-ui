@@ -48,7 +48,7 @@ const Hero: React.FC = () => (
           py={{ base: '1.75rem', md: '1.5rem', lg: '1rem' }}
           mx={{ base: 'auto', lg: '0px' }}
         >
-          Get started
+          Sign up now
         </ChartaButton>
       </Flex>
     </Box>

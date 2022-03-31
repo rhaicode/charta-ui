@@ -5,6 +5,7 @@ const ChartaButton: React.FC<ButtonProps> = ({ children, ...props }) => (
     backgroundColor="base-peach-btn"
     fontWeight="500"
     color="#0D261F"
+    borderRadius="5px"
     {...props}
   >
     {children}

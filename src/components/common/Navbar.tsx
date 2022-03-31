@@ -45,7 +45,7 @@ const Navbar: React.FC<{ noHamburger?: boolean }> = ({ noHamburger }) => (
         </Link>
       </Box>
       <Link to="/signup">
-        <ChartaButton px="2rem">Get started</ChartaButton>
+        <ChartaButton px="2rem">Sign up</ChartaButton>
       </Link>
     </Flex>
     {!noHamburger && (
