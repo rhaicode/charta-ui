@@ -11,8 +11,9 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
-import ChartaButton from '../components/common/ChartaButton';
+import { Link } from 'react-router-dom';
 
+import ChartaButton from '../components/common/ChartaButton';
 import Footer from '../components/common/Footer';
 import Navbar from '../components/common/Navbar';
 
@@ -104,9 +105,11 @@ const Login: React.FC = () => {
           </form>
           <Text as="p" w={{ base: '20ch', md: 'full' }} mx="auto" mt="30px">
             Do you have an account?{' '}
-            <Text as="span" color="base-gold">
-              Sign up
-            </Text>
+            <Link to="/signup">
+              <Text as="span" color="base-gold">
+                Sign up
+              </Text>
+            </Link>
           </Text>
           <Text
             as="span"

@@ -150,9 +150,11 @@ const Signup: React.FC = () => {
           </form>
           <Text as="p" w={{ base: '20ch', md: 'full' }} mx="auto" mt="30px">
             Already have an account?{' '}
-            <Text as="span" color="base-gold">
-              Log in
-            </Text>
+            <Link to="/login">
+              <Text as="span" color="base-gold">
+                Log in
+              </Text>
+            </Link>
           </Text>
         </Box>
       </Container>

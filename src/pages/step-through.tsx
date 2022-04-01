@@ -18,7 +18,7 @@ const StepThrough: React.FC = () => {
     >
       <Flex backgroundColor="base-secondary-green">
         <Container maxW="container.xl" overflow="hidden">
-          <Navbar />
+          <Navbar noHamburger />
         </Container>
       </Flex>
       <Box

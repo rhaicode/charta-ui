@@ -1,4 +1,3 @@
-import { AddIcon } from '@chakra-ui/icons';
 import {
   Flex,
   Image,
@@ -58,10 +57,14 @@ const Navbar: React.FC<{ noHamburger?: boolean }> = ({ noHamburger }) => (
             variant="outline"
             icon={<Image src="/assets/hamburger-icon.png" mx="auto" />}
             borderColor="transparent"
+            _active={{ backgroundColor: 'transparent' }}
           />
-          <MenuList>
-            <MenuItem icon={<AddIcon />} command="⌘T">
-              New Tab
+          <MenuList zIndex="5" color="base-primary-green">
+            <MenuItem>
+              <Link to="/login">Login</Link>
+            </MenuItem>
+            <MenuItem>
+              <Link to="/signup">Sign up</Link>
             </MenuItem>
           </MenuList>
         </Menu>

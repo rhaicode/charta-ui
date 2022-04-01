@@ -36,7 +36,7 @@ const HowItWorks: React.FC = () => (
     </Text>
     <Grid
       templateColumns={{
-        base: 'repeat(1, minmax(315px,600px))',
+        base: 'repeat(1, minmax(100%,600px))',
         lg: 'repeat(3, 1fr)',
       }}
       borderRadius="15px"
