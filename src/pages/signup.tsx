@@ -78,7 +78,7 @@ const Signup: React.FC = () => {
                   }}
                   mt="-0.5rem"
                 />
-                <Box position="absolute" right="0px">
+                <Box position="absolute" right="0px" bottom="4px">
                   {isOpen ? (
                     <Button
                       size="sm"
@@ -117,7 +117,7 @@ const Signup: React.FC = () => {
                   }}
                   mt="-0.5rem"
                 />
-                <Box position="absolute" right="0px">
+                <Box position="absolute" right="0px" bottom="4px">
                   {isOpenReenter ? (
                     <Button
                       size="sm"
