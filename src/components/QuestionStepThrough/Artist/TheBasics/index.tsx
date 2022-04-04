@@ -31,6 +31,7 @@ const TheBasics: React.FC = () => {
       subStep: argSubStep ?? +onboardedUser.subStep + 1,
       prevSubStep: prevSubStep ?? '0',
     });
+    window.scrollTo(0, 0);
   };
 
   const preferredMaxWidthOnSubStep: Record<string, string> = {

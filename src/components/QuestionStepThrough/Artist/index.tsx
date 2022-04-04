@@ -57,7 +57,8 @@ const ArtistSteps: React.FC = () => {
           textTransform="uppercase"
           letterSpacing="0.08em"
         >
-          Step {onboardedUser.step}: {stepsComponent[onboardedUser.step].name}
+          Step {onboardedUser.step}:{' '}
+          {stepsComponent[onboardedUser.step as number].name}
         </Text>
         <Box
           position="absolute"
@@ -70,13 +71,16 @@ const ArtistSteps: React.FC = () => {
             } else {
               setOnboardedUser({
                 ...onboardedUser,
-                step: onboardedUser.step,
-                subStep:
-                  onboardedUser.prevSubStep !== '0'
-                    ? onboardedUser.prevSubStep
-                    : +onboardedUser.subStep - 1,
-                prevSubStep: '0',
+                step: Number(onboardedUser.prevStep)
+                  ? +onboardedUser.prevStep
+                  : +onboardedUser.step,
+                subStep: Number(onboardedUser.prevSubStep)
+                  ? onboardedUser.prevSubStep
+                  : +onboardedUser.subStep - 1,
+                prevStep: 0,
+                prevSubStep: 0,
               });
+              window.scrollTo(0, 0);
             }
           }}
         >
@@ -85,7 +89,7 @@ const ArtistSteps: React.FC = () => {
       </Flex>
       <DottedBreadCrumb steps={stepsComponent} mt="24px" />
       {React.cloneElement(
-        stepsComponent[onboardedUser.step].component as ReactElement<
+        stepsComponent[onboardedUser.step as number].component as ReactElement<
           any,
           string | JSXElementConstructor<any>
         >

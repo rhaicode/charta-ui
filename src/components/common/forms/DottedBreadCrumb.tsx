@@ -50,7 +50,7 @@ const DottedBreadCrumb: React.FC<
                 onClick={() => {
                   setOnboardedUser({
                     ...onboardedUser,
-                    step: i === 0 ? 1 : onboardedUser.step + 1,
+                    step: i === 0 ? 1 : +onboardedUser.step + 1,
                   });
                 }}
               >
