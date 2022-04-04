@@ -47,7 +47,7 @@ const ResponsiveModal: React.FC<ResponsiveModalProps> = ({
           fontSize={{ base: '17px', md: '18px' }}
           m={{ base: '10px', md: '20px' }}
         />
-        <ModalBody>{body}</ModalBody>
+        <ModalBody mt={{ md: '20px' }}>{body}</ModalBody>
         <ModalFooter mt="30px">{footer}</ModalFooter>
       </ModalContent>
     </Modal>

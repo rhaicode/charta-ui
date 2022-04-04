@@ -24,7 +24,6 @@ const CreateYourAccount: React.FC = () => {
       ...onboardedUser,
       step: 2,
       subStep: 1,
-      prevStep: 1,
       prevSubStep: 7,
     });
     window.scrollTo(0, 0);

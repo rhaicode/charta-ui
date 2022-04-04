@@ -7,6 +7,7 @@ import { onboardedUserAtomPersist } from '../../../atoms';
 import DottedBreadCrumb from '../../common/forms/DottedBreadCrumb';
 
 import TheBasics from './TheBasics';
+import SongInfo from './SongInfo';
 
 const stepsComponent: Record<
   number,
@@ -19,7 +20,7 @@ const stepsComponent: Record<
   2: {
     name: 'Song Information',
     alternateName: 'Song Info',
-    component: <Box />,
+    component: <SongInfo />,
   },
   3: {
     name: 'Payment',
@@ -43,6 +44,41 @@ const ArtistSteps: React.FC = () => {
   const history = useHistory();
   const [onboardedUser, setOnboardedUser] = useAtom(onboardedUserAtomPersist);
 
+  const onPrev = () => {
+    if (onboardedUser.step === 1 && +onboardedUser.subStep === 1) {
+      history.push('/get-started');
+    } else {
+      const lastSubstepOnStep: Record<number, number> = {
+        1: 7,
+      };
+
+      const isInvalidPrevSubstep =
+        Number(onboardedUser.subStep) === 1 &&
+        Number(onboardedUser.prevSubStep) === 0;
+
+      const calculatedSubstep = Number(onboardedUser.prevSubStep)
+        ? onboardedUser.prevSubStep
+        : +onboardedUser.subStep - 1;
+
+      const incomingSubstep = isInvalidPrevSubstep
+        ? lastSubstepOnStep[(Number(onboardedUser.step) - 1) as number]
+        : calculatedSubstep;
+
+      const incomingStep =
+        onboardedUser.subStep === 1
+          ? +onboardedUser.step - 1
+          : +onboardedUser.step;
+
+      setOnboardedUser({
+        ...onboardedUser,
+        step: incomingStep,
+        subStep: incomingSubstep,
+        prevSubStep: 0,
+      });
+      window.scrollTo(0, 0);
+    }
+  };
+
   return (
     <Box p={{ base: '30px', md: '40px' }} color="base-primary-green">
       <Flex alignItems="center" justifyContent="center" pos="relative">
@@ -65,24 +101,7 @@ const ArtistSteps: React.FC = () => {
           left="-8px"
           mb="2px"
           color="base-primary-green"
-          onClick={() => {
-            if (onboardedUser.step === 1 && +onboardedUser.subStep === 1) {
-              history.push('/get-started');
-            } else {
-              setOnboardedUser({
-                ...onboardedUser,
-                step: Number(onboardedUser.prevStep)
-                  ? +onboardedUser.prevStep
-                  : +onboardedUser.step,
-                subStep: Number(onboardedUser.prevSubStep)
-                  ? onboardedUser.prevSubStep
-                  : +onboardedUser.subStep - 1,
-                prevStep: 0,
-                prevSubStep: 0,
-              });
-              window.scrollTo(0, 0);
-            }
-          }}
+          onClick={onPrev}
         >
           <FiChevronLeft fontSize="20px" cursor="pointer" />
         </Box>
