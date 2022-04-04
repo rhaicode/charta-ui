@@ -3,7 +3,7 @@ import { useAtom } from 'jotai';
 import React, { ReactNode } from 'react';
 import { BsCheck } from 'react-icons/bs';
 
-import { onboardedUserAtomPersist } from '../../atoms';
+import { onboardedUserAtomPersist } from '../../../atoms';
 
 const DottedBreadCrumb: React.FC<
   FlexProps & {

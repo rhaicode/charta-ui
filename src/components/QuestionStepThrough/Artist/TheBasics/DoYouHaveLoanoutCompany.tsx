@@ -1,24 +1,13 @@
 import React from 'react';
-import {
-  Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalFooter,
-  ModalHeader,
-  ModalOverlay,
-  Text,
-  useBreakpointValue,
-  useDisclosure,
-} from '@chakra-ui/react';
-import ChartaFormButton from '../../../common/ChartaFormButton';
+import { Text, useDisclosure } from '@chakra-ui/react';
+import ChartaFormButton from '../../../common/forms/ChartaFormButton';
 import ChartaButton from '../../../common/ChartaButton';
+import ResponsiveModal from '../../../common/ResponsiveModal';
 
 const DoYouHaveLoanoutCompany: React.FC<{
   onNext?: (subStep?: string, prevStep?: string | number) => void;
 }> = ({ onNext = () => {} }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const modalSize = useBreakpointValue({ base: 'full', md: 'md' });
 
   return (
     <>
@@ -61,23 +50,13 @@ const DoYouHaveLoanoutCompany: React.FC<{
       >
         No
       </ChartaFormButton>
-
-      <Modal isOpen={isOpen} onClose={onClose} size={modalSize}>
-        <ModalOverlay />
-        <ModalContent
-          minW={{ base: '100vw', md: '542px' }}
-          p={{ base: '20px', md: '50px' }}
-          minH={{ base: '100vh', md: '528px' }}
-        >
-          <ModalHeader fontSize="24px" fontWeight="700" lineHeight="32px">
-            Loan-out company
-          </ModalHeader>
-          <ModalCloseButton
-            fontSize={{ base: '17px', md: '18px' }}
-            m={{ base: '20px', md: '30px' }}
-          />
-          <ModalBody>
-            <Text as="p" lineHeight="24px" mt={{ base: '0px', md: '30px' }}>
+      <ResponsiveModal
+        isOpen={isOpen}
+        onClose={onClose}
+        title="Loan-out company"
+        body={
+          <>
+            <Text as="p" lineHeight="24px">
               Some artists and producers will form a limited liability company
               or a corporation that will &quot;loan out&quot; the services of
               the artist or producer to other people to help create songs.
@@ -89,19 +68,19 @@ const DoYouHaveLoanoutCompany: React.FC<{
               supposed to do under the producer agreement, and, if it
               doesn&apos;t, then you&apos;re on the hook personally.
             </Text>
-          </ModalBody>
-          <ModalFooter mt="30px">
-            <ChartaButton
-              px="4rem"
-              w={{ base: 'full', md: 'auto' }}
-              onClick={onClose}
-              mx="auto"
-            >
-              Got it, thanks!
-            </ChartaButton>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
+          </>
+        }
+        footer={
+          <ChartaButton
+            px="4rem"
+            w={{ base: 'full', md: 'auto' }}
+            onClick={onClose}
+            mx="auto"
+          >
+            Got it, thanks!
+          </ChartaButton>
+        }
+      />
     </>
   );
 };

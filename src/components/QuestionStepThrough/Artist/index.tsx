@@ -4,7 +4,7 @@ import React, { JSXElementConstructor, ReactElement, ReactNode } from 'react';
 import { FiChevronLeft } from 'react-icons/fi';
 import { useHistory } from 'react-router-dom';
 import { onboardedUserAtomPersist } from '../../../atoms';
-import DottedBreadCrumb from '../../common/DottedBreadCrumb';
+import DottedBreadCrumb from '../../common/forms/DottedBreadCrumb';
 
 import TheBasics from './TheBasics';
 
