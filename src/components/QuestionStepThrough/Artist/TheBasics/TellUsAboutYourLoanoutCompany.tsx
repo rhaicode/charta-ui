@@ -60,6 +60,8 @@ const TellUsAboutYourLoanoutCompany: React.FC<{
       }}
       position={{ base: 'absolute', md: 'relative' }}
       bottom={{ base: '0px', md: 'auto' }}
+      w={{ base: '80vw', md: 'auto' }}
+      mx="auto"
     >
       Continue
     </ChartaButton>

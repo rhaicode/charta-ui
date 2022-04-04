@@ -2,13 +2,13 @@ import React from 'react';
 import { Box, Text } from '@chakra-ui/react';
 import ChartaButton from '../../../common/ChartaButton';
 
-const BeforeWeGetGoing: React.FC<{ onNext?: () => void }> = ({
+const BeforeSongNameIsReleased: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
 }) => (
   <>
     <Text as="p" fontSize="xl" lineHeight="28px" fontWeight="600" mr="auto">
-      Before we get going, remember that there are tow copyrights in every song
-      you hear:
+      Before [song name] is released, it&apos;s crucial that we figure out
+      whether or not it contains any samples. There are two types of samples:
     </Text>
     <Text
       as="span"
@@ -19,10 +19,11 @@ const BeforeWeGetGoing: React.FC<{ onNext?: () => void }> = ({
       mr="auto"
       mt="30px"
     >
-      1. The Composition
+      1. Master Samples
     </Text>
     <Text as="p" lineHeight="28px" mr="auto" mt="12px" mb="40px">
-      This is the written musical notes and lyrics.
+      These are audio snippets of other songs that you include in the master of
+      your song.
     </Text>
     <Text
       as="span"
@@ -32,14 +33,11 @@ const BeforeWeGetGoing: React.FC<{ onNext?: () => void }> = ({
       fontWeight="500"
       mr="auto"
     >
-      2. The Master
-    </Text>
-    <Text as="p" lineHeight="28px" mr="auto" mt="12px">
-      This is the master sound recording of the composition being performed.
+      2. Composition Samples
     </Text>
     <Text as="p" lineHeight="28px" mr="auto" mt="1rem" mb="40px">
-      Copies of the master, which are what listeners stream and purchase, are
-      called “records.”
+      These are snippets of lyrics or sheet music from other songs that get
+      re-recorded in your song.
     </Text>
     <Box h="6rem" display={{ base: 'block', md: 'none' }} />
     <ChartaButton
@@ -60,4 +58,4 @@ const BeforeWeGetGoing: React.FC<{ onNext?: () => void }> = ({
   </>
 );
 
-export default BeforeWeGetGoing;
+export default BeforeSongNameIsReleased;

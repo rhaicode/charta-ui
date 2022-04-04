@@ -43,7 +43,7 @@ const CreateYourAccount: React.FC = () => {
       <Text as="p" mr="auto" mt="12px" mb="30px">
         You&apos;ll receive an email confirmation.
       </Text>
-      <FormControl>
+      <FormControl maxW="345px">
         <Input
           id="emailAddress"
           type="text"
@@ -54,7 +54,7 @@ const CreateYourAccount: React.FC = () => {
           borderBottomColor="base-gray-3"
         />
       </FormControl>
-      <FormControl>
+      <FormControl maxW="345px">
         <Input
           id="address"
           type="text"
@@ -66,7 +66,7 @@ const CreateYourAccount: React.FC = () => {
           mt="30px"
         />
       </FormControl>
-      <FormControl>
+      <FormControl maxW="345px">
         <Input
           id="address"
           type="text"
@@ -78,7 +78,7 @@ const CreateYourAccount: React.FC = () => {
           mt="30px"
         />
       </FormControl>
-      <FormControl>
+      <FormControl maxW="345px">
         <Input
           id="address"
           type="text"
@@ -141,6 +141,8 @@ const CreateYourAccount: React.FC = () => {
         onClick={onOpen}
         position={{ base: 'absolute', md: 'relative' }}
         bottom={{ base: '0px', md: 'auto' }}
+        w={{ base: '80vw', md: 'auto' }}
+        ml={{ base: 'auto', md: '0px' }}
       >
         Create Account
       </ChartaButton>

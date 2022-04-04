@@ -2,16 +2,16 @@ import React from 'react';
 import { Image, Text } from '@chakra-ui/react';
 import ChartaButton from '../../../common/ChartaButton';
 
-const SongDescription: React.FC<{ onNext?: () => void }> = ({
+const PaymentDescription: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
 }) => (
   <>
-    <Image src="/assets/song-info-logo.png" />
+    <Image src="/assets/payment-logo.png" />
     <Text as="span" display="block" fontWeight="700" fontSize="2xl" mt="30px">
-      Song Information
+      Payment
     </Text>
     <Text as="p" textAlign="center" mt="20px" mb="30px">
-      Next, we need to know a little more about the song.
+      Now we&apos;re on to the most important part.
     </Text>
     <ChartaButton
       px="4rem"
@@ -29,4 +29,4 @@ const SongDescription: React.FC<{ onNext?: () => void }> = ({
   </>
 );
 
-export default SongDescription;
+export default PaymentDescription;

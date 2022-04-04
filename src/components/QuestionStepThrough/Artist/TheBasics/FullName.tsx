@@ -20,7 +20,7 @@ const FullName: React.FC<{ onNext?: () => void }> = ({ onNext = () => {} }) => (
       What&apos;s your full name?
     </Text>
 
-    <FormControl>
+    <FormControl maxW="345px">
       <Input
         id="firstName"
         type="text"
@@ -32,7 +32,7 @@ const FullName: React.FC<{ onNext?: () => void }> = ({ onNext = () => {} }) => (
         mt="0.5rem"
       />
     </FormControl>
-    <FormControl>
+    <FormControl maxW="345px">
       <Input
         id="lastName"
         type="text"
@@ -45,7 +45,7 @@ const FullName: React.FC<{ onNext?: () => void }> = ({ onNext = () => {} }) => (
       />
     </FormControl>
 
-    <FormControl>
+    <FormControl maxW="345px">
       <FormLabel>
         <Text
           as="p"
@@ -68,7 +68,7 @@ const FullName: React.FC<{ onNext?: () => void }> = ({ onNext = () => {} }) => (
         borderBottomColor="base-gray-3"
       />
     </FormControl>
-    <FormControl>
+    <FormControl maxW="345px">
       <Checkbox size="lg" mt="30px" borderColor="base-gray-3">
         <Text
           as="span"
@@ -91,6 +91,8 @@ const FullName: React.FC<{ onNext?: () => void }> = ({ onNext = () => {} }) => (
       }}
       position={{ base: 'absolute', md: 'relative' }}
       bottom={{ base: '0px', md: 'auto' }}
+      w={{ base: '80vw', md: 'auto' }}
+      mx="auto"
     >
       Continue
     </ChartaButton>

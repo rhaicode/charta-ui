@@ -8,6 +8,7 @@ import DottedBreadCrumb from '../../common/forms/DottedBreadCrumb';
 
 import TheBasics from './TheBasics';
 import SongInfo from './SongInfo';
+import Payment from './Payment';
 
 const stepsComponent: Record<
   number,
@@ -24,7 +25,7 @@ const stepsComponent: Record<
   },
   3: {
     name: 'Payment',
-    component: <Box />,
+    component: <Payment />,
   },
   4: {
     name: 'Marketing',
@@ -50,6 +51,7 @@ const ArtistSteps: React.FC = () => {
     } else {
       const lastSubstepOnStep: Record<number, number> = {
         1: 7,
+        2: 12,
       };
 
       const isInvalidPrevSubstep =

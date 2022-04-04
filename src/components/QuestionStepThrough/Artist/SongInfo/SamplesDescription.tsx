@@ -1,17 +1,26 @@
 import React from 'react';
-import { Image, Text } from '@chakra-ui/react';
+import { Flex, Image, Text } from '@chakra-ui/react';
 import ChartaButton from '../../../common/ChartaButton';
 
-const SongDescription: React.FC<{ onNext?: () => void }> = ({
+const SamplesDescription: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
 }) => (
   <>
-    <Image src="/assets/song-info-logo.png" />
+    <Flex
+      w="150px"
+      h="150px"
+      rounded="full"
+      backgroundColor="base-secondary-green"
+      justifyContent="center"
+    >
+      <Image src="/assets/basic-music-logo.png" alignSelf="center" />
+    </Flex>
     <Text as="span" display="block" fontWeight="700" fontSize="2xl" mt="30px">
-      Song Information
+      Samples
     </Text>
     <Text as="p" textAlign="center" mt="20px" mb="30px">
-      Next, we need to know a little more about the song.
+      Sometimes it&apos;s better to ask for permission than forgiveness,
+      especially if you don&apos;t want to be sued for copyright infringement.
     </Text>
     <ChartaButton
       px="4rem"
@@ -29,4 +38,4 @@ const SongDescription: React.FC<{ onNext?: () => void }> = ({
   </>
 );
 
-export default SongDescription;
+export default SamplesDescription;

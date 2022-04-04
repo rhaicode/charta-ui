@@ -1,31 +1,30 @@
 import React from 'react';
-import { Text, Input, FormControl, FormLabel } from '@chakra-ui/react';
+import { Text, Input, FormControl } from '@chakra-ui/react';
 import ChartaButton from '../../../common/ChartaButton';
 
-const NameOfSong: React.FC<{ onNext?: () => void }> = ({
+const HowManySongsSampled: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
 }) => (
   <>
-    <FormControl maxW="345px">
-      <FormLabel htmlFor="nameOfSong">
-        <Text
-          as="p"
-          fontSize={{ base: 'lg', md: 'xl' }}
-          lineHeight="28px"
-          fontWeight="500"
-          mr="auto"
-        >
-          What&apos;s the name of the song?
-        </Text>
-      </FormLabel>
+    <Text
+      as="p"
+      fontSize={{ base: 'lg', md: 'xl' }}
+      lineHeight="28px"
+      fontWeight="500"
+      mr="auto"
+    >
+      How many songs were sampled?
+    </Text>
+    <FormControl>
       <Input
-        id="nameOfSong"
+        id="firstName"
         type="text"
         variant="flushed"
-        placeholder="Enter name"
+        placeholder="Number of songs"
         _placeholder={{ color: 'base-gray-3' }}
         borderBottom="1px solid"
         borderBottomColor="base-gray-3"
+        mt="0.5rem"
       />
     </FormControl>
     <ChartaButton
@@ -46,4 +45,4 @@ const NameOfSong: React.FC<{ onNext?: () => void }> = ({
   </>
 );
 
-export default NameOfSong;
+export default HowManySongsSampled;

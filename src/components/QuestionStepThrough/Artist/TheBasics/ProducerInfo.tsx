@@ -27,7 +27,7 @@ const ProducerInfo: React.FC<{ onNext?: () => void }> = ({
         What is [your producer&apos;s] name?
       </Text>
 
-      <FormControl>
+      <FormControl maxW="345px">
         <Input
           id="producerFirstName"
           type="text"
@@ -39,7 +39,7 @@ const ProducerInfo: React.FC<{ onNext?: () => void }> = ({
           mt="0.5rem"
         />
       </FormControl>
-      <FormControl>
+      <FormControl maxW="345px">
         <FormLabel>
           <Text
             as="p"
@@ -70,6 +70,8 @@ const ProducerInfo: React.FC<{ onNext?: () => void }> = ({
         onClick={onOpen}
         position={{ base: 'absolute', md: 'relative' }}
         bottom={{ base: '0px', md: 'auto' }}
+        w={{ base: '80vw', md: 'auto' }}
+        mx="auto"
       >
         Continue
       </ChartaButton>
