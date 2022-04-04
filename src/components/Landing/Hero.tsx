@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
         >
           With our platform, you can spend more time making music, and less time
           worrying about producer deals. On Charta, you can negotiate and
-          execute a contract all in plain English, starting at just $25 per
+          execute a contract all in plain English, starting at just $50 per
           agreement.
         </Text>
         <Flex maxW={{ base: 'full', lg: 'max-content' }}>

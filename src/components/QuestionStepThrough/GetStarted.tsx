@@ -140,7 +140,7 @@ const HeresHowItWorks: React.FC = () => {
           <Text as="p">
             We&apos;ve built a platform that will let you easily create, send,
             and negotiate an offer with your producer, all in plain English, all
-            for $25.
+            for $50.
           </Text>
           <Text as="p" mt={{ base: '2rem', md: '1.5rem' }}>
             Once you and your producer have agreed on everything, we&apos;ll
