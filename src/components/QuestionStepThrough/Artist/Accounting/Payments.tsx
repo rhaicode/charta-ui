@@ -13,11 +13,11 @@ const Payments: React.FC<{ onNext?: () => void }> = ({ onNext = () => {} }) => (
     >
       Payments
     </Text>
-    <Text as="p" lineHeight="28px" mr="auto" mt="30px">
+    <Text as="p" lineHeight="28px" mr="auto" mt="20px">
       An artist won&apos;t have to pay their producer any profits or royalties
       until they recoup their recording costs.
     </Text>
-    <Text as="p" lineHeight="28px" mr="auto" mt="1.5rem">
+    <Text as="p" lineHeight="28px" mr="auto" mt="20px">
       Once those recording costs are recouped, the artist will pay the producer
       their profit share or royalty within 30 days after the end of the month in
       which the artist received or was credited that money.

@@ -11,7 +11,7 @@ const Audits: React.FC = () => {
       ...onboardedUser,
       step: 6,
       subStep: 1,
-      prevSubStep: 13,
+      prevSubStep: 14,
     });
     window.scrollTo(0, 0);
   };
@@ -27,12 +27,12 @@ const Audits: React.FC = () => {
       >
         Audits
       </Text>
-      <Text as="p" lineHeight="28px" mr="auto" mt="30px">
+      <Text as="p" lineHeight="28px" mr="auto" mt="20px">
         A producer can audit an artist once a year and only looking back at 3
         years&apos; worth of statements. Each statement can only be audited
         once.
       </Text>
-      <Text as="p" lineHeight="28px" mr="auto" mt="30px">
+      <Text as="p" lineHeight="28px" mr="auto" mt="20px">
         Sales reports and other statements prepared by distributors or labels
         cannot be audited. A producer will have 12 months to point out any
         mistakes in those sales reports or other third-party statements to an

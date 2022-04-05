@@ -2,7 +2,7 @@ import React from 'react';
 import { Text } from '@chakra-ui/react';
 import ChartaFormButton from '../../../common/forms/ChartaFormButton';
 
-const AfterAllTheRecordingCosts: React.FC<{
+const HowDoesYourLabelPayYou: React.FC<{
   onNext?: (subStep?: string, prevStep?: string | number) => void;
 }> = ({ onNext = () => {} }) => (
   <>
@@ -13,8 +13,7 @@ const AfterAllTheRecordingCosts: React.FC<{
       fontWeight="500"
       mr="auto"
     >
-      After all the recording costs of [song name] are recouped, I want to pay
-      [producer first name] royalties:
+      How does your label pay you?
     </Text>
     <ChartaFormButton
       mt="30px"
@@ -22,7 +21,7 @@ const AfterAllTheRecordingCosts: React.FC<{
         onNext();
       }}
     >
-      Prospectively
+      Profit Split
     </ChartaFormButton>
     <ChartaFormButton
       mt="20px"
@@ -30,9 +29,9 @@ const AfterAllTheRecordingCosts: React.FC<{
         onNext();
       }}
     >
-      Retroactively
+      Rpyalty
     </ChartaFormButton>
   </>
 );
 
-export default AfterAllTheRecordingCosts;
+export default HowDoesYourLabelPayYou;

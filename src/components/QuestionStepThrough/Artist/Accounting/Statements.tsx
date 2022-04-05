@@ -15,7 +15,7 @@ const Statements: React.FC<{ onNext?: () => void }> = ({
     >
       Statements
     </Text>
-    <Text as="p" lineHeight="28px" mr="auto" mt="30px">
+    <Text as="p" lineHeight="28px" mr="auto" mt="20px">
       Every time an artist pays their producer profits or royalties, the artist
       has to create and provide a statement showing how that payment was
       calculated.

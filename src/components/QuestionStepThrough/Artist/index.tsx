@@ -45,7 +45,7 @@ const stepsComponent: Record<
   5: {
     name: 'Accounting',
     component: <Accounting />,
-    lastSubstep: 13,
+    lastSubstep: 14,
   },
   6: {
     name: 'Legal',

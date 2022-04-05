@@ -34,7 +34,7 @@ const IfProducerDoesNotProvideNIL: React.FC<{
         id="firstName"
         type="text"
         variant="flushed"
-        placeholder="Number of songs"
+        placeholder="Number of days"
         _placeholder={{ color: 'base-gray-3' }}
         borderBottom="1px solid"
         borderBottomColor="base-gray-3"
