@@ -2,7 +2,7 @@ import React from 'react';
 import { Text } from '@chakra-ui/react';
 import ChartaButton from '../../../common/ChartaButton';
 
-const MechanicalRoyalties: React.FC<{ onNext?: () => void }> = ({
+const CashPayment: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
 }) => (
   <>
@@ -13,17 +13,16 @@ const MechanicalRoyalties: React.FC<{ onNext?: () => void }> = ({
       fontWeight="600"
       mr="auto"
     >
-      Mechanical Royalties
+      Cash Payment
     </Text>
     <Text as="p" lineHeight="28px" mr="auto" mt="30px">
-      Since the label is the owner of the master, it has to pay $0.091, or
-      $0.0175 per minute of playing time, whichever is greater, to the owners of
-      the composition every time it creates a physical copy of the master. These
-      are called &quot;mechanical royalties.&quot;
+      You&apos;ll need to pay [producer first name] the cash payment of [amount]
+      within 7 days of [producer first name] delivering the final master of
+      [song name] to [you] and [you] accepting that master as the final version.
     </Text>
     <Text as="p" lineHeight="28px" mr="auto" mt="1.5rem">
-      Labels consider the $0.091 per track to be the “statutory minimum”
-      mechanical royalty.
+      If the final master has already been accepted, then you&apos;ll need to
+      pay [producer first name] within 7 days of signing the contract.
     </Text>
     <ChartaButton
       px="4rem"
@@ -43,4 +42,4 @@ const MechanicalRoyalties: React.FC<{ onNext?: () => void }> = ({
   </>
 );
 
-export default MechanicalRoyalties;
+export default CashPayment;

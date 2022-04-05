@@ -6,7 +6,13 @@ const BeforeSongNameIsReleased: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
 }) => (
   <>
-    <Text as="p" fontSize="xl" lineHeight="28px" fontWeight="600" mr="auto">
+    <Text
+      as="p"
+      fontSize={{ base: 'lg', md: 'xl' }}
+      lineHeight="28px"
+      fontWeight="600"
+      mr="auto"
+    >
       Before [song name] is released, it&apos;s crucial that we figure out
       whether or not it contains any samples. There are two types of samples:
     </Text>

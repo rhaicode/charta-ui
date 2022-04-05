@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Text } from '@chakra-ui/react';
 import ChartaButton from '../../../common/ChartaButton';
 
-const BeforeWeGetGoing: React.FC<{ onNext?: () => void }> = ({
+const PostRecoupment: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
 }) => (
   <>
@@ -13,8 +13,11 @@ const BeforeWeGetGoing: React.FC<{ onNext?: () => void }> = ({
       fontWeight="600"
       mr="auto"
     >
-      Before we get going, remember that there are tow copyrights in every song
-      you hear:
+      Post-Recoupment Producer Royalties
+    </Text>
+    <Text lineHeight="28px" mr="auto" mt="20px">
+      Once recording costs are recouped, the producer will be paid its royalties
+      in one of two ways:
     </Text>
     <Text
       as="span"
@@ -25,10 +28,11 @@ const BeforeWeGetGoing: React.FC<{ onNext?: () => void }> = ({
       mr="auto"
       mt="30px"
     >
-      1. The Composition
+      1. Prospectively
     </Text>
     <Text as="p" lineHeight="28px" mr="auto" mt="12px" mb="40px">
-      This is the written musical notes and lyrics.
+      The producer is paid royalties on all sales made after the recording costs
+      were recouped.
     </Text>
     <Text
       as="span"
@@ -38,14 +42,11 @@ const BeforeWeGetGoing: React.FC<{ onNext?: () => void }> = ({
       fontWeight="500"
       mr="auto"
     >
-      2. The Master
+      2. Retroactively
     </Text>
     <Text as="p" lineHeight="28px" mr="auto" mt="12px">
-      This is the master sound recording of the composition being performed.
-    </Text>
-    <Text as="p" lineHeight="28px" mr="auto" mt="1rem" mb="40px">
-      Copies of the master, which are what listeners stream and purchase, are
-      called “records.”
+      The producer is paid royalties on all sales made after the song was
+      released, starting with the first sale, or &quot;record one.&quot;
     </Text>
     <Box h="6rem" display={{ base: 'block', md: 'none' }} />
     <ChartaButton
@@ -66,4 +67,4 @@ const BeforeWeGetGoing: React.FC<{ onNext?: () => void }> = ({
   </>
 );
 
-export default BeforeWeGetGoing;
+export default PostRecoupment;

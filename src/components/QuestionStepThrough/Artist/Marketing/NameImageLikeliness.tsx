@@ -2,28 +2,21 @@ import React from 'react';
 import { Text } from '@chakra-ui/react';
 import ChartaButton from '../../../common/ChartaButton';
 
-const MechanicalRoyalties: React.FC<{ onNext?: () => void }> = ({
+const NameImageLikeliness: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
 }) => (
   <>
-    <Text
-      as="p"
-      fontSize={{ base: 'lg', md: 'xl' }}
-      lineHeight="28px"
-      fontWeight="600"
-      mr="auto"
-    >
-      Mechanical Royalties
+    <Text as="p" fontSize="lg" lineHeight="28px" fontWeight="600" mr="auto">
+      Name, Image &amp; Likeness
     </Text>
     <Text as="p" lineHeight="28px" mr="auto" mt="30px">
-      Since the label is the owner of the master, it has to pay $0.091, or
-      $0.0175 per minute of playing time, whichever is greater, to the owners of
-      the composition every time it creates a physical copy of the master. These
-      are called &quot;mechanical royalties.&quot;
+      When an artist promotes a song, they will typically reference the producer
+      they worked with and use that producer&amp;s professional name, image, and
+      likeness in marketing materials.
     </Text>
     <Text as="p" lineHeight="28px" mr="auto" mt="1.5rem">
-      Labels consider the $0.091 per track to be the “statutory minimum”
-      mechanical royalty.
+      The next couple questions will help make sure that both parties agree on
+      how those marketing materials will be created.
     </Text>
     <ChartaButton
       px="4rem"
@@ -43,4 +36,4 @@ const MechanicalRoyalties: React.FC<{ onNext?: () => void }> = ({
   </>
 );
 
-export default MechanicalRoyalties;
+export default NameImageLikeliness;

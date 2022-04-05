@@ -24,7 +24,7 @@ const SongDescription: React.FC<{ onNext?: () => void }> = ({
       w={{ base: '80vw', md: 'auto' }}
       mx="auto"
     >
-      Continue
+      Let&apos; do it
     </ChartaButton>
   </>
 );

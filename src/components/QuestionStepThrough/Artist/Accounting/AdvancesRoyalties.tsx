@@ -2,16 +2,16 @@ import React from 'react';
 import { Image, Text } from '@chakra-ui/react';
 import ChartaButton from '../../../common/ChartaButton';
 
-const PaymentDescription: React.FC<{ onNext?: () => void }> = ({
+const AdvancesRoyalties: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
 }) => (
   <>
-    <Image src="/assets/payment-logo.png" />
+    <Image src="/assets/accounting-logo.png" />
     <Text as="span" display="block" fontWeight="700" fontSize="2xl" mt="30px">
-      Payment
+      Advances &amp; Royalties
     </Text>
     <Text as="p" textAlign="center" mt="20px" mb="30px">
-      Now we&apos;re on to the most important part.
+      Music Law 401.
     </Text>
     <ChartaButton
       px="4rem"
@@ -24,9 +24,9 @@ const PaymentDescription: React.FC<{ onNext?: () => void }> = ({
       w={{ base: '80vw', md: 'auto' }}
       mx="auto"
     >
-      Let&apos;s go
+      Continue
     </ChartaButton>
   </>
 );
 
-export default PaymentDescription;
+export default AdvancesRoyalties;

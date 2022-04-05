@@ -6,7 +6,13 @@ const ControlledRates: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
 }) => (
   <>
-    <Text as="p" fontSize="xl" lineHeight="28px" fontWeight="600" mr="auto">
+    <Text
+      as="p"
+      fontSize={{ base: 'lg', md: 'xl' }}
+      lineHeight="28px"
+      fontWeight="600"
+      mr="auto"
+    >
       Controlled Rates
     </Text>
     <Text as="p" lineHeight="28px" mr="auto" mt="30px">

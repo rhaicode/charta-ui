@@ -9,6 +9,8 @@ import DottedBreadCrumb from '../../common/forms/DottedBreadCrumb';
 import TheBasics from './TheBasics';
 import SongInfo from './SongInfo';
 import Payment from './Payment';
+import Marketing from './Marketing';
+import Accounting from './Accounting';
 
 const stepsComponent: Record<
   number,
@@ -37,13 +39,13 @@ const stepsComponent: Record<
   },
   4: {
     name: 'Marketing',
-    component: <Box />,
-    lastSubstep: 1,
+    component: <Marketing />,
+    lastSubstep: 10,
   },
   5: {
     name: 'Accounting',
-    component: <Box />,
-    lastSubstep: 1,
+    component: <Accounting />,
+    lastSubstep: 13,
   },
   6: {
     name: 'Legal',

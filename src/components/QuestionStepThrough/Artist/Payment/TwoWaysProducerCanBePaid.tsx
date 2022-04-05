@@ -6,7 +6,13 @@ const TwoWaysProducerCanBePaid: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
 }) => (
   <>
-    <Text as="p" fontSize="xl" lineHeight="28px" fontWeight="600" mr="auto">
+    <Text
+      as="p"
+      fontSize={{ base: 'lg', md: 'xl' }}
+      lineHeight="28px"
+      fontWeight="600"
+      mr="auto"
+    >
       There are two ways a producer can be paid:
     </Text>
     <Text

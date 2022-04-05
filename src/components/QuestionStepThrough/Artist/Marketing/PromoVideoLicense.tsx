@@ -1,8 +1,8 @@
 import React from 'react';
-import { Text } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import ChartaButton from '../../../common/ChartaButton';
 
-const MechanicalRoyalties: React.FC<{ onNext?: () => void }> = ({
+const PromoVideoLicense: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
 }) => (
   <>
@@ -13,18 +13,19 @@ const MechanicalRoyalties: React.FC<{ onNext?: () => void }> = ({
       fontWeight="600"
       mr="auto"
     >
-      Mechanical Royalties
+      Promo Video License
     </Text>
     <Text as="p" lineHeight="28px" mr="auto" mt="30px">
-      Since the label is the owner of the master, it has to pay $0.091, or
-      $0.0175 per minute of playing time, whichever is greater, to the owners of
-      the composition every time it creates a physical copy of the master. These
-      are called &quot;mechanical royalties.&quot;
+      If a producer co-owns the composition of a song with an artist, then the
+      artist needs permission from the producer to create promo videos.
     </Text>
-    <Text as="p" lineHeight="28px" mr="auto" mt="1.5rem">
-      Labels consider the $0.091 per track to be the “statutory minimum”
-      mechanical royalty.
+    <Text as="p" lineHeight="28px" mr="auto" mt="30px">
+      Even though the artist won&apos;t pay a license fee to the producer to
+      create the promo video, that won&apos;t stop the producer from directly
+      collecting their share of any money from DSPs from streaming promo videos,
+      including YouTube, for example.
     </Text>
+    <Box h="8rem" display={{ md: 'none' }} />
     <ChartaButton
       px="4rem"
       py="1rem"
@@ -43,4 +44,4 @@ const MechanicalRoyalties: React.FC<{ onNext?: () => void }> = ({
   </>
 );
 
-export default MechanicalRoyalties;
+export default PromoVideoLicense;

@@ -2,16 +2,16 @@ import React from 'react';
 import { Image, Text } from '@chakra-ui/react';
 import ChartaButton from '../../../common/ChartaButton';
 
-const PaymentDescription: React.FC<{ onNext?: () => void }> = ({
+const MarketingDescription: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
 }) => (
   <>
-    <Image src="/assets/payment-logo.png" />
+    <Image src="/assets/marketing-logo.png" />
     <Text as="span" display="block" fontWeight="700" fontSize="2xl" mt="30px">
-      Payment
+      Marketing
     </Text>
     <Text as="p" textAlign="center" mt="20px" mb="30px">
-      Now we&apos;re on to the most important part.
+      Get the hype train rolling.
     </Text>
     <ChartaButton
       px="4rem"
@@ -29,4 +29,4 @@ const PaymentDescription: React.FC<{ onNext?: () => void }> = ({
   </>
 );
 
-export default PaymentDescription;
+export default MarketingDescription;
