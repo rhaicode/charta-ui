@@ -162,7 +162,7 @@ const CreateYourAccount: React.FC = () => {
               will file any lawsuits and litigate any disputes.
             </Text>
             <Text as="p" lineHeight="24px" mt="2rem">
-              If that&apos; OK, then let&apos; keep rolling!
+              If that&apos;s OK, then let&apos;s keep rolling!
             </Text>
           </>
         }

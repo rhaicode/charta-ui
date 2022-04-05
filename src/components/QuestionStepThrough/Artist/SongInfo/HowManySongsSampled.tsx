@@ -15,7 +15,7 @@ const HowManySongsSampled: React.FC<{ onNext?: () => void }> = ({
     >
       How many songs were sampled?
     </Text>
-    <FormControl>
+    <FormControl maxW="345px">
       <Input
         id="firstName"
         type="text"

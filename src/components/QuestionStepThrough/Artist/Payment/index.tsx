@@ -1,13 +1,31 @@
-import { Box, Flex } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 import { useAtom } from 'jotai';
 import React, { JSXElementConstructor, ReactElement, ReactNode } from 'react';
 import { onboardedUserAtomPersist } from '../../../../atoms';
+import ControlledCompositionClauses from './ControlledCompositionClauses';
+import ControlledRates from './ControlledRates';
+import DoesProducerSubjectControlledCompositionClauses from './DoesProducerSubjectControlledCompositionClauses';
+import DoesRecordDealCompositionClauses from './DoesRecordDealCompositionClauses';
+import MechanicalRoyalties from './MechanicalRoyalties';
+import MechanicalRoyaltyCaps from './MechanicalRoyaltyCaps';
 import PaymentDescription from './PaymentDescription';
+import TwoWaysProducerCanBePaid from './TwoWaysProducerCanBePaid';
+import WhyShouldDoContract from './WhyShouldDoContract';
+import WillProducerBePaidPercentage from './WillProducerBePaidPercentage';
+import WillYouBePayingCashFee from './WillYouBePayingCashFee';
 
 const subSteps: Record<string, ReactNode> = {
   1: <PaymentDescription />,
-  2: <Box />,
-  3: <Box />,
+  2: <WhyShouldDoContract />,
+  3: <TwoWaysProducerCanBePaid />,
+  4: <WillYouBePayingCashFee />,
+  5: <WillProducerBePaidPercentage />,
+  6: <ControlledCompositionClauses />,
+  7: <MechanicalRoyalties />,
+  8: <ControlledRates />,
+  9: <MechanicalRoyaltyCaps />,
+  10: <DoesRecordDealCompositionClauses />,
+  11: <DoesProducerSubjectControlledCompositionClauses />,
 };
 
 const Payment: React.FC = () => {
@@ -23,9 +41,7 @@ const Payment: React.FC = () => {
   };
 
   const preferredMaxWidthOnSubStep: Record<string, string> = {
-    1: '405px',
-    7: '385px',
-    '5b': '455px',
+    7: '480px',
   };
 
   return (

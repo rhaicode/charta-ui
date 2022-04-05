@@ -12,32 +12,43 @@ import Payment from './Payment';
 
 const stepsComponent: Record<
   number,
-  { name: string; alternateName?: string; component: ReactNode }
+  {
+    name: string;
+    alternateName?: string;
+    component: ReactNode;
+    lastSubstep: number;
+  }
 > = {
   1: {
     name: 'The Basics',
     component: <TheBasics />,
+    lastSubstep: 7,
   },
   2: {
     name: 'Song Information',
     alternateName: 'Song Info',
     component: <SongInfo />,
+    lastSubstep: 12,
   },
   3: {
     name: 'Payment',
     component: <Payment />,
+    lastSubstep: 11,
   },
   4: {
     name: 'Marketing',
     component: <Box />,
+    lastSubstep: 1,
   },
   5: {
     name: 'Accounting',
     component: <Box />,
+    lastSubstep: 1,
   },
   6: {
     name: 'Legal',
     component: <Box />,
+    lastSubstep: 1,
   },
 };
 
@@ -49,11 +60,6 @@ const ArtistSteps: React.FC = () => {
     if (onboardedUser.step === 1 && +onboardedUser.subStep === 1) {
       history.push('/get-started');
     } else {
-      const lastSubstepOnStep: Record<number, number> = {
-        1: 7,
-        2: 12,
-      };
-
       const isInvalidPrevSubstep =
         Number(onboardedUser.subStep) === 1 &&
         Number(onboardedUser.prevSubStep) === 0;
@@ -63,7 +69,7 @@ const ArtistSteps: React.FC = () => {
         : +onboardedUser.subStep - 1;
 
       const incomingSubstep = isInvalidPrevSubstep
-        ? lastSubstepOnStep[(Number(onboardedUser.step) - 1) as number]
+        ? stepsComponent[(Number(onboardedUser.step) - 1) as number].lastSubstep
         : calculatedSubstep;
 
       const incomingStep =
