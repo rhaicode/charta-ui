@@ -13,7 +13,7 @@ const DottedBreadCrumb: React.FC<
     >;
   }
 > = ({ steps, ...props }) => {
-  const [onboardedUser, setOnboardedUser] = useAtom(onboardedUserAtomPersist);
+  const [onboardedUser] = useAtom(onboardedUserAtomPersist);
   const entries = Object.entries(steps);
   return (
     <Flex justifyContent="center" minH="42px" {...props}>
@@ -43,17 +43,7 @@ const DottedBreadCrumb: React.FC<
         return (
           <Box pos="relative">
             <Flex maxW="max-content" alignItems="center">
-              <Flex
-                direction="column"
-                maxW="max-content"
-                alignItems="center"
-                onClick={() => {
-                  setOnboardedUser({
-                    ...onboardedUser,
-                    step: i === 0 ? 1 : +onboardedUser.step + 1,
-                  });
-                }}
-              >
+              <Flex direction="column" maxW="max-content" alignItems="center">
                 <Flex
                   alignItems="center"
                   justifyContent="center"
