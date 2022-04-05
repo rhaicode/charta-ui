@@ -11,6 +11,8 @@ import SongInfo from './SongInfo';
 import Payment from './Payment';
 import Marketing from './Marketing';
 import Accounting from './Accounting';
+import Legal from './Legal';
+import ReviewContract from './ReviewContract';
 
 const stepsComponent: Record<
   number,
@@ -49,7 +51,12 @@ const stepsComponent: Record<
   },
   6: {
     name: 'Legal',
-    component: <Box />,
+    component: <Legal />,
+    lastSubstep: 12,
+  },
+  7: {
+    name: 'Review Contract',
+    component: <ReviewContract />,
     lastSubstep: 1,
   },
 };

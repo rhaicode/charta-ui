@@ -1,8 +1,8 @@
 import React from 'react';
-import { Text } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import ChartaButton from '../../../common/ChartaButton';
 
-const CashPayment: React.FC<{ onNext?: () => void }> = ({
+const DisputesBetweenParties: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
 }) => (
   <>
@@ -13,17 +13,19 @@ const CashPayment: React.FC<{ onNext?: () => void }> = ({
       fontWeight="600"
       mr="auto"
     >
-      Cash Payment
+      Disputes between Parties
     </Text>
     <Text as="p" lineHeight="28px" mr="auto" mt="20px">
-      You&apos;ll need to pay [producer first name] the cash payment of [amount]
-      within 7 days of [producer first name] delivering the final master of
-      [song name] to [you] and [you] accepting that master as the final version.
+      In the event a breach can&apos;t be, or isn&apos;t, fixed, and one party
+      has to sue the other party, it&apos;s typical for the party that wins that
+      lawsuit to be reimbursed for its reasonable legal fees and expenses.
     </Text>
     <Text as="p" lineHeight="28px" mr="auto" mt="20px">
-      If the final master has already been accepted, then you&apos;ll need to
-      pay [producer first name] within 7 days of signing the contract.
+      These are called &quot;prevailing party fees&quot; and these types of
+      lawsuits are called &quot;direct claims.&quot;
     </Text>
+
+    <Box h="8rem" display={{ md: 'none' }} />
     <ChartaButton
       px="4rem"
       py="1rem"
@@ -42,4 +44,4 @@ const CashPayment: React.FC<{ onNext?: () => void }> = ({
   </>
 );
 
-export default CashPayment;
+export default DisputesBetweenParties;

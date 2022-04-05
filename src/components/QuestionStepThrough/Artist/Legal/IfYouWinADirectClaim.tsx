@@ -2,7 +2,7 @@ import React from 'react';
 import { Text } from '@chakra-ui/react';
 import ChartaFormButton from '../../../common/forms/ChartaFormButton';
 
-const HowDoesYourLabelPayYou: React.FC<{
+const IfYouWinADirectClaim: React.FC<{
   onNext?: (subStep?: string, prevStep?: string | number) => void;
 }> = ({ onNext = () => {} }) => (
   <>
@@ -13,7 +13,8 @@ const HowDoesYourLabelPayYou: React.FC<{
       fontWeight="500"
       mr="auto"
     >
-      How does your label pay you?
+      If you win a direct claim, do you want the other party to reimburse you
+      for your prevailing party fees?
     </Text>
     <ChartaFormButton
       mt="30px"
@@ -21,7 +22,7 @@ const HowDoesYourLabelPayYou: React.FC<{
         onNext();
       }}
     >
-      Profit Split
+      Yes
     </ChartaFormButton>
     <ChartaFormButton
       mt="20px"
@@ -29,9 +30,9 @@ const HowDoesYourLabelPayYou: React.FC<{
         onNext();
       }}
     >
-      Royalty
+      No
     </ChartaFormButton>
   </>
 );
 
-export default HowDoesYourLabelPayYou;
+export default IfYouWinADirectClaim;

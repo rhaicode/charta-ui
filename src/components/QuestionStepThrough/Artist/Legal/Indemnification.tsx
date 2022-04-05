@@ -2,7 +2,7 @@ import React from 'react';
 import { Text } from '@chakra-ui/react';
 import ChartaButton from '../../../common/ChartaButton';
 
-const CashPayment: React.FC<{ onNext?: () => void }> = ({
+const Indemnification: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
 }) => (
   <>
@@ -13,16 +13,11 @@ const CashPayment: React.FC<{ onNext?: () => void }> = ({
       fontWeight="600"
       mr="auto"
     >
-      Cash Payment
+      Indemnification
     </Text>
     <Text as="p" lineHeight="28px" mr="auto" mt="20px">
-      You&apos;ll need to pay [producer first name] the cash payment of [amount]
-      within 7 days of [producer first name] delivering the final master of
-      [song name] to [you] and [you] accepting that master as the final version.
-    </Text>
-    <Text as="p" lineHeight="28px" mr="auto" mt="20px">
-      If the final master has already been accepted, then you&apos;ll need to
-      pay [producer first name] within 7 days of signing the contract.
+      If the other party uses a sample in [song name] with your knowledge, and
+      the sample owners sue you, what happens next?
     </Text>
     <ChartaButton
       px="4rem"
@@ -42,4 +37,4 @@ const CashPayment: React.FC<{ onNext?: () => void }> = ({
   </>
 );
 
-export default CashPayment;
+export default Indemnification;

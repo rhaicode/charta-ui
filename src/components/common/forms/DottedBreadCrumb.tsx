@@ -22,6 +22,8 @@ const DottedBreadCrumb: React.FC<
         const isCurrent = onboardedUser.step === i + 1 && i !== 0;
         const isPast = onboardedUser.step > i + 1;
 
+        const isValidBreadcrumb = i < entries.length - 1;
+
         const preferredLeft: Record<number, string> = {
           0: '-22px',
           1: '-18px',
@@ -44,26 +46,28 @@ const DottedBreadCrumb: React.FC<
           <Box pos="relative">
             <Flex maxW="max-content" alignItems="center">
               <Flex direction="column" maxW="max-content" alignItems="center">
-                <Flex
-                  alignItems="center"
-                  justifyContent="center"
-                  h="16px"
-                  w="16px"
-                  backgroundColor="#ECECF1"
-                  {...((isPast || isInitial) && {
-                    backgroundColor: 'base-gold',
-                  })}
-                  {...(isCurrent && {
-                    border: '2px solid',
-                    borderColor: 'base-gold',
-                    backgroundColor: 'white',
-                  })}
-                  rounded="full"
-                >
-                  {isPast && <BsCheck fontSize="16px" color="white" />}
-                </Flex>
+                {isValidBreadcrumb && (
+                  <Flex
+                    alignItems="center"
+                    justifyContent="center"
+                    h="16px"
+                    w="16px"
+                    backgroundColor="#ECECF1"
+                    {...((isPast || isInitial) && {
+                      backgroundColor: 'base-gold',
+                    })}
+                    {...(isCurrent && {
+                      border: '2px solid',
+                      borderColor: 'base-gold',
+                      backgroundColor: 'white',
+                    })}
+                    rounded="full"
+                  >
+                    {isPast && <BsCheck fontSize="16px" color="white" />}
+                  </Flex>
+                )}
               </Flex>
-              {i < entries.length - 1 && (
+              {isValidBreadcrumb && s[1].name !== 'Legal' && (
                 <Box
                   w={{ base: '40px', md: '70px', lg: '86px' }}
                   h="2px"
@@ -71,20 +75,22 @@ const DottedBreadCrumb: React.FC<
                 />
               )}
             </Flex>
-            <Text
-              as="span"
-              display="block"
-              fontWeight={isCurrent || isInitial ? '500' : '400'}
-              color={
-                isCurrent || isInitial ? 'base-primary-green' : 'base-gray-2'
-              }
-              fontSize={{ base: '10px', md: '12px' }}
-              mt="7px"
-              pos="absolute"
-              left={{ base: preferredBaseLeft[i], md: preferredLeft[i] }}
-            >
-              {s[1].alternateName ?? s[1].name}
-            </Text>
+            {isValidBreadcrumb && (
+              <Text
+                as="span"
+                display="block"
+                fontWeight={isCurrent || isInitial ? '500' : '400'}
+                color={
+                  isCurrent || isInitial ? 'base-primary-green' : 'base-gray-2'
+                }
+                fontSize={{ base: '10px', md: '12px' }}
+                mt="7px"
+                pos="absolute"
+                left={{ base: preferredBaseLeft[i], md: preferredLeft[i] }}
+              >
+                {s[1].alternateName ?? s[1].name}
+              </Text>
+            )}
           </Box>
         );
       })}
