@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Text, useDisclosure } from '@chakra-ui/react';
 import { useAtom } from 'jotai';
 import ChartaFormButton from '../../../common/forms/ChartaFormButton';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 import { onboardedUserAtomPersist } from '../../../../atoms';
 
 const WithThatInMind: React.FC = () => {
@@ -66,7 +66,7 @@ const WithThatInMind: React.FC = () => {
         Teaser videos of 1 min or less
       </ChartaFormButton>
       <Box h="8rem" display={{ md: 'none' }} />
-      <ChartaButton
+      <ChartaContinueButton
         px="4rem"
         py="1rem"
         mt={{ md: '40px' }}
@@ -80,7 +80,7 @@ const WithThatInMind: React.FC = () => {
         mx="auto"
       >
         Continue
-      </ChartaButton>
+      </ChartaContinueButton>
     </>
   );
 };

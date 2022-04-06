@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormControl, Input, Text, useDisclosure } from '@chakra-ui/react';
 import ChartaFormButton from '../../../common/forms/ChartaFormButton';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const HowMuchProducerOwn: React.FC<{
   onNext?: (subStep?: string, prevStep?: string | number) => void;
@@ -33,7 +33,7 @@ const HowMuchProducerOwn: React.FC<{
       <ChartaFormButton mt="20px" isSelected={isOpen} onClick={onOpen}>
         None. I want to buy them out.
       </ChartaFormButton>
-      <ChartaButton
+      <ChartaContinueButton
         px="4rem"
         py="1rem"
         mt={{ md: '30px' }}
@@ -47,7 +47,7 @@ const HowMuchProducerOwn: React.FC<{
         mx="auto"
       >
         Continue
-      </ChartaButton>
+      </ChartaContinueButton>
     </>
   );
 };

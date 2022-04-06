@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, Text, Flex, Box } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const ControlledCompositionClauses: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
@@ -31,7 +31,7 @@ const ControlledCompositionClauses: React.FC<{ onNext?: () => void }> = ({
       composition clauses only cover physical record sales, like CDs and vinyl.
     </Text>
     <Box h="4rem" display={{ md: 'none' }} />
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       onClick={() => {
         onNext();
@@ -43,7 +43,7 @@ const ControlledCompositionClauses: React.FC<{ onNext?: () => void }> = ({
       mx="auto"
     >
       Continue
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 

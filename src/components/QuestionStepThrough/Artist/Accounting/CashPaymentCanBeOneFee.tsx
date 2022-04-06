@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const CashPaymentCanBeOneFee: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
@@ -31,7 +31,7 @@ const CashPaymentCanBeOneFee: React.FC<{ onNext?: () => void }> = ({
       With that in mind, people typically agree that the cash payment is half
       fee, half advance.
     </Text>
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       py="1rem"
       mt={{ md: '40px' }}
@@ -45,7 +45,7 @@ const CashPaymentCanBeOneFee: React.FC<{ onNext?: () => void }> = ({
       mx="auto"
     >
       Continue
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 

@@ -8,7 +8,7 @@ import {
   Button,
   Flex,
 } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 import ResponsiveModal from '../../../common/ResponsiveModal';
 
 const ProducerInfo: React.FC<{ onNext?: () => void }> = ({
@@ -62,7 +62,7 @@ const ProducerInfo: React.FC<{ onNext?: () => void }> = ({
           borderBottomColor="base-gray-3"
         />
       </FormControl>
-      <ChartaButton
+      <ChartaContinueButton
         px="4rem"
         py="1rem"
         mt={{ md: '40px' }}
@@ -74,7 +74,7 @@ const ProducerInfo: React.FC<{ onNext?: () => void }> = ({
         mx="auto"
       >
         Continue
-      </ChartaButton>
+      </ChartaContinueButton>
       <ResponsiveModal
         minW={{ base: '100vw', md: '466px' }}
         minH={{ base: '100vh', md: ' 360px' }}
@@ -90,14 +90,14 @@ const ProducerInfo: React.FC<{ onNext?: () => void }> = ({
         }
         footer={
           <Flex direction="column" alignItems="center" w="full">
-            <ChartaButton
+            <ChartaContinueButton
               w={{ base: 'full', md: '224px' }}
               onClick={() => {
                 onNext();
               }}
             >
               Create an account
-            </ChartaButton>
+            </ChartaContinueButton>
             <Button
               mt="20px"
               w={{ base: 'full', md: '224px' }}

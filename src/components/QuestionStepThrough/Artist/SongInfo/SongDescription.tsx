@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, Text } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const SongDescription: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
@@ -13,7 +13,7 @@ const SongDescription: React.FC<{ onNext?: () => void }> = ({
     <Text as="p" textAlign="center" mt="20px" mb="30px">
       Next, we need to know a little more about the song.
     </Text>
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       onClick={() => {
         onNext();
@@ -25,7 +25,7 @@ const SongDescription: React.FC<{ onNext?: () => void }> = ({
       mx="auto"
     >
       Let&apos;s do it
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 

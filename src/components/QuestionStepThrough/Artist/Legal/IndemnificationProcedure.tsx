@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Text } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const IndemnificationProcedure: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
@@ -31,7 +31,7 @@ const IndemnificationProcedure: React.FC<{ onNext?: () => void }> = ({
       permission.
     </Text>
     <Box h="8rem" display={{ md: 'none' }} />
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       py="1rem"
       mt={{ md: '40px' }}
@@ -45,7 +45,7 @@ const IndemnificationProcedure: React.FC<{ onNext?: () => void }> = ({
       mx="auto"
     >
       Continue
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 

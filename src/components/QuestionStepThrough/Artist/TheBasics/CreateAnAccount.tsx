@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, useDisclosure } from '@chakra-ui/react';
 import ChartaFormButton from '../../../common/forms/ChartaFormButton';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const CreateAnAccount: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
@@ -54,7 +54,7 @@ const CreateAnAccount: React.FC<{ onNext?: () => void }> = ({
             chance to create an account to save your progress.
           </Text>
 
-          <ChartaButton
+          <ChartaContinueButton
             px="4rem"
             py="1rem"
             mt={{ md: '30px' }}
@@ -66,7 +66,7 @@ const CreateAnAccount: React.FC<{ onNext?: () => void }> = ({
             bottom={{ base: '0px', md: 'auto' }}
           >
             Continue
-          </ChartaButton>
+          </ChartaContinueButton>
         </>
       )}
     </>

@@ -22,7 +22,7 @@ const steps = [
 ];
 
 const HowItWorks: React.FC = () => (
-  <Box mt="86px">
+  <Box mt="120px">
     <Text
       as="span"
       display="block"
@@ -42,7 +42,7 @@ const HowItWorks: React.FC = () => (
       borderRadius="15px"
       backgroundColor={{
         base: 'transparent',
-        lg: 'base-dark-green',
+        lg: 'rgba(255,255,255,0.05)',
       }}
       maxW="max-content"
       mx={{ base: 'auto', lg: '0px' }}
@@ -54,7 +54,7 @@ const HowItWorks: React.FC = () => (
         <Box
           key={s.title}
           borderRadius="15px"
-          backgroundColor="base-light-green"
+          backgroundColor="rgba(255,255,255,0.1)"
           p="35px"
         >
           <Box maxW="max-content" mx="auto">

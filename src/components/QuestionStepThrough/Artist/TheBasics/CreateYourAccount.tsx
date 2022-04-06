@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react';
 import { useAtom } from 'jotai';
 
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 import PasswordField from '../../../common/forms/PasswordField';
 import ResponsiveModal from '../../../common/ResponsiveModal';
 import { onboardedUserAtomPersist } from '../../../../atoms';
@@ -133,7 +133,7 @@ const CreateYourAccount: React.FC = () => {
         </Checkbox>
       </FormControl>
       <Box h="6rem" display={{ base: 'block', md: 'none' }} />
-      <ChartaButton
+      <ChartaContinueButton
         px="4rem"
         py="1rem"
         mt={{ md: '40px' }}
@@ -145,7 +145,7 @@ const CreateYourAccount: React.FC = () => {
         ml={{ base: 'auto', md: '0px' }}
       >
         Create Account
-      </ChartaButton>
+      </ChartaContinueButton>
       <ResponsiveModal
         minW={{ base: '100vw', md: '466px' }}
         minH={{ base: '100vh', md: ' 360px' }}
@@ -168,14 +168,14 @@ const CreateYourAccount: React.FC = () => {
         }
         footer={
           <Flex direction="column" alignItems="center" w="full">
-            <ChartaButton
+            <ChartaContinueButton
               w={{ base: 'full', md: '224px' }}
               onClick={() => {
                 onNextStep();
               }}
             >
               Continue
-            </ChartaButton>
+            </ChartaContinueButton>
           </Flex>
         }
       />

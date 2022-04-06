@@ -3,7 +3,7 @@ import React from 'react';
 import GreenDash from './GreenDash';
 
 const Features: React.FC = () => (
-  <Box mt={{ md: '80px', lg: '140px' }}>
+  <Box mt={{ md: '80px', lg: '140px' }} mb="50px">
     <Flex
       direction={{ base: 'column', lg: 'row' }}
       alignItems="center"
@@ -18,7 +18,7 @@ const Features: React.FC = () => (
         mt={{ base: '4rem', lg: '0px' }}
       >
         <Box
-          backgroundColor="base-light-green"
+          backgroundColor="rgba(255,255,255,0.1)"
           width={{ base: '340px', md: '420px', lg: '546px' }}
           height={{ base: '220px', md: '275px', lg: '380px' }}
           borderRadius="15px"
@@ -77,7 +77,7 @@ const Features: React.FC = () => (
           display="block"
           fontWeight="500"
           fontSize={{ base: '25px', md: '32px' }}
-          w="max-content"
+          w={{ md: 'max-content' }}
           lineHeight="40px"
           mx={{ base: '0px', md: 'auto', lg: '0px' }}
           mt={{ base: '80px', md: '0px' }}
@@ -107,7 +107,7 @@ const Features: React.FC = () => (
           mx="auto"
         />
         <Box
-          backgroundColor="base-light-green"
+          backgroundColor="rgba(255,255,255,0.1)"
           display={{ base: 'none', md: 'block' }}
           width={{ md: '495px', lg: '546px' }}
           height={{ md: '330px', lg: '380px' }}

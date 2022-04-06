@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer: React.FC<BoxProps> = ({ ...props }) => (
   <Flex
-    backgroundColor="base-light-green"
+    backgroundColor="rgba(255,255,255, 0.1)"
     h={{ base: '140px', md: '77px' }}
     position="absolute"
     w="100%"

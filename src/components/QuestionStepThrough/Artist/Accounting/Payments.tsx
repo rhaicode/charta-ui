@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const Payments: React.FC<{ onNext?: () => void }> = ({ onNext = () => {} }) => (
   <>
@@ -22,7 +22,7 @@ const Payments: React.FC<{ onNext?: () => void }> = ({ onNext = () => {} }) => (
       their profit share or royalty within 30 days after the end of the month in
       which the artist received or was credited that money.
     </Text>
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       py="1rem"
       mt={{ md: '40px' }}
@@ -36,7 +36,7 @@ const Payments: React.FC<{ onNext?: () => void }> = ({ onNext = () => {} }) => (
       mx="auto"
     >
       Continue
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, Text } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const PaymentsAndStatements: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
@@ -14,7 +14,7 @@ const PaymentsAndStatements: React.FC<{ onNext?: () => void }> = ({
       Let&apos;s talk about when profit or royalty payments and accounting
       statements will be sent.
     </Text>
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       onClick={() => {
         onNext();
@@ -26,7 +26,7 @@ const PaymentsAndStatements: React.FC<{ onNext?: () => void }> = ({
       mx="auto"
     >
       Let&apos;s go
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 

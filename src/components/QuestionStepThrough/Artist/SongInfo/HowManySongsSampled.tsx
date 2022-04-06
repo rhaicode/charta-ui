@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, Input, FormControl } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const HowManySongsSampled: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
@@ -27,7 +27,7 @@ const HowManySongsSampled: React.FC<{ onNext?: () => void }> = ({
         mt="0.5rem"
       />
     </FormControl>
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       py="1rem"
       mt={{ md: '40px' }}
@@ -41,7 +41,7 @@ const HowManySongsSampled: React.FC<{ onNext?: () => void }> = ({
       mx="auto"
     >
       Continue
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 

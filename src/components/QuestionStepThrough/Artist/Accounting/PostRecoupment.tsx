@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Text } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const PostRecoupment: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
@@ -49,7 +49,7 @@ const PostRecoupment: React.FC<{ onNext?: () => void }> = ({
       released, starting with the first sale, or &quot;record one.&quot;
     </Text>
     <Box h="6rem" display={{ base: 'block', md: 'none' }} />
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       py="1rem"
       mt={{ md: '40px' }}
@@ -63,7 +63,7 @@ const PostRecoupment: React.FC<{ onNext?: () => void }> = ({
       mx="auto"
     >
       Continue
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 

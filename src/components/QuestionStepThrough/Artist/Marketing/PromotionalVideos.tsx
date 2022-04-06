@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Image, Text } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const PromotionalVideos: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
@@ -17,7 +17,7 @@ const PromotionalVideos: React.FC<{ onNext?: () => void }> = ({
       these &quot;promo videos.&quot;
     </Text>
     <Box h="8rem" display={{ md: 'none' }} />
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       onClick={() => {
         onNext();
@@ -29,7 +29,7 @@ const PromotionalVideos: React.FC<{ onNext?: () => void }> = ({
       mx="auto"
     >
       Continue
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 

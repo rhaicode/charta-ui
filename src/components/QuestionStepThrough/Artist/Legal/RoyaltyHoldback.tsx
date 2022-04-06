@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAtom } from 'jotai';
 import { Box, Text } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 import { onboardedUserAtomPersist } from '../../../../atoms';
 
 const RoyaltyHoldback: React.FC = () => {
@@ -43,7 +43,7 @@ const RoyaltyHoldback: React.FC = () => {
       </Text>
 
       <Box h="8rem" display={{ md: 'none' }} />
-      <ChartaButton
+      <ChartaContinueButton
         px="4rem"
         py="1rem"
         mt={{ md: '40px' }}
@@ -57,7 +57,7 @@ const RoyaltyHoldback: React.FC = () => {
         mx="auto"
       >
         Continue
-      </ChartaButton>
+      </ChartaContinueButton>
     </>
   );
 };

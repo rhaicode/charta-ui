@@ -1,14 +1,14 @@
 import React from 'react';
 import { Box, Text } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const IfYoureSuedBecauseOfSomething: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
 }) => (
   <>
     <Text as="p" fontSize="lg" lineHeight="24px" fontWeight="500" mr="auto">
-      If you&apos;re sued because of something the other party did, it’s not
-      fair that you should have to pay legal fees and expenses to defend
+      If you&apos;re sued because of something the other party did, it&apos;s
+      not fair that you should have to pay legal fees and expenses to defend
       yourself and, potentially, even pay the judgment or settlement amount.
     </Text>
     <Text
@@ -34,7 +34,7 @@ const IfYoureSuedBecauseOfSomething: React.FC<{ onNext?: () => void }> = ({
       That&apos;s indemnification.
     </Text>
     <Box h="6rem" display={{ md: 'none' }} />
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       py="1rem"
       mt={{ md: '40px' }}
@@ -48,7 +48,7 @@ const IfYoureSuedBecauseOfSomething: React.FC<{ onNext?: () => void }> = ({
       mx="auto"
     >
       Continue
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 

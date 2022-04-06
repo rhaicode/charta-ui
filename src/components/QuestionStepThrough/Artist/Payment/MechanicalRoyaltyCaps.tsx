@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const MechanicalRoyaltyCaps: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
@@ -30,7 +30,7 @@ const MechanicalRoyaltyCaps: React.FC<{ onNext?: () => void }> = ({
       Collectively, the controlled rate and caps are called &quot;controlled
       composition clauses.&quot;
     </Text>
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       py="1rem"
       mt={{ md: '40px' }}
@@ -44,7 +44,7 @@ const MechanicalRoyaltyCaps: React.FC<{ onNext?: () => void }> = ({
       mx="auto"
     >
       Continue
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 

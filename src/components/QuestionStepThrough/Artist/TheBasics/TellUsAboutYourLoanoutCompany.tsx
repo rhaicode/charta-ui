@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, Input, FormControl } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const TellUsAboutYourLoanoutCompany: React.FC<{
   onNext?: (subStep?: string | number, prevStep?: string | number) => void;
@@ -50,7 +50,7 @@ const TellUsAboutYourLoanoutCompany: React.FC<{
         mt="10px"
       />
     </FormControl>
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       py="1rem"
       mt={{ md: '40px' }}
@@ -64,7 +64,7 @@ const TellUsAboutYourLoanoutCompany: React.FC<{
       mx="auto"
     >
       Continue
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 

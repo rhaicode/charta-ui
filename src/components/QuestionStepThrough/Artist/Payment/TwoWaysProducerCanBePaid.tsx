@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Text } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const TwoWaysProducerCanBePaid: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
@@ -46,7 +46,7 @@ const TwoWaysProducerCanBePaid: React.FC<{ onNext?: () => void }> = ({
       then the cash fee can be a prepayment of future profits or royalties.
     </Text>
     <Box h="6rem" display={{ base: 'block', md: 'none' }} />
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       py="1rem"
       mt={{ md: '40px' }}
@@ -60,7 +60,7 @@ const TwoWaysProducerCanBePaid: React.FC<{ onNext?: () => void }> = ({
       mx="auto"
     >
       Continue
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 

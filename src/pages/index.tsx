@@ -5,23 +5,25 @@ import Navbar from '../components/common/Navbar';
 import Hero from '../components/Landing/Hero';
 import HowItWorks from '../components/Landing/HowItWorks';
 import Features from '../components/Landing/Features';
-import CallToAction from '../components/Landing/CallToAction';
 import Footer from '../components/common/Footer';
+import WhatWeDo from '../components/Landing/WhatWeDo';
+import GetStartedForm from '../components/Landing/GetStartedForm';
 
 const Landing: React.FC = () => (
   <Box
-    backgroundColor="base-dark-green-1"
+    background="linear-gradient(180deg, rgba(50, 61, 97, 0) 0%, #323D61 100%), url(./assets/background-texture.png);"
     position="relative"
     pt={{ base: '12px', md: '27px' }}
-    pb={{ base: '16rem', md: '16rem' }}
+    pb="12rem"
     color="white"
   >
     <Container maxW="container.xl" overflowX="hidden">
       <Navbar />
       <Hero />
+      <WhatWeDo />
       <HowItWorks />
       <Features />
-      <CallToAction />
+      <GetStartedForm />
     </Container>
     <Footer />
   </Box>

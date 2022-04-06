@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, useDisclosure } from '@chakra-ui/react';
 import ChartaFormButton from '../../../common/forms/ChartaFormButton';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 import ResponsiveModal from '../../../common/ResponsiveModal';
 
 const DoYouHaveLoanoutCompany: React.FC<{
@@ -71,14 +71,14 @@ const DoYouHaveLoanoutCompany: React.FC<{
           </>
         }
         footer={
-          <ChartaButton
+          <ChartaContinueButton
             px="4rem"
             w={{ base: 'full', md: 'auto' }}
             onClick={onClose}
             mx="auto"
           >
             Got it, thanks!
-          </ChartaButton>
+          </ChartaContinueButton>
         }
       />
     </>

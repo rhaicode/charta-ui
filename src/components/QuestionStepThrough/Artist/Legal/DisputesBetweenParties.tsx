@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Text } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const DisputesBetweenParties: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
@@ -26,7 +26,7 @@ const DisputesBetweenParties: React.FC<{ onNext?: () => void }> = ({
     </Text>
 
     <Box h="8rem" display={{ md: 'none' }} />
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       py="1rem"
       mt={{ md: '40px' }}
@@ -40,7 +40,7 @@ const DisputesBetweenParties: React.FC<{ onNext?: () => void }> = ({
       mx="auto"
     >
       Continue
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 

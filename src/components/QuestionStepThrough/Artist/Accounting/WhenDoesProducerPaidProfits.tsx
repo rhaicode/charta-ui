@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Text } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const WhenDoesProducerPaidProfits: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
@@ -36,7 +36,7 @@ const WhenDoesProducerPaidProfits: React.FC<{ onNext?: () => void }> = ({
       in record sales before the producer starts receiving profits.
     </Text>
     <Box h="6rem" display={{ base: 'block', md: 'none' }} />
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       py="1rem"
       mt={{ md: '40px' }}
@@ -50,7 +50,7 @@ const WhenDoesProducerPaidProfits: React.FC<{ onNext?: () => void }> = ({
       mx="auto"
     >
       Continue
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 

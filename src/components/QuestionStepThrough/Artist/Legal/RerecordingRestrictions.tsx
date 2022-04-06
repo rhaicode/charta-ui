@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Text } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const RerecordingRestrictions: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
@@ -26,7 +26,7 @@ const RerecordingRestrictions: React.FC<{ onNext?: () => void }> = ({
       producer can re-record the composition and create a new master.
     </Text>
     <Box h="8rem" display={{ md: 'none' }} />
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       py="1rem"
       mt={{ md: '40px' }}
@@ -40,7 +40,7 @@ const RerecordingRestrictions: React.FC<{ onNext?: () => void }> = ({
       mx="auto"
     >
       Continue
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 

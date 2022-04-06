@@ -6,7 +6,7 @@ import {
   FormLabel,
   Checkbox,
 } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const FullName: React.FC<{ onNext?: () => void }> = ({ onNext = () => {} }) => (
   <>
@@ -81,7 +81,7 @@ const FullName: React.FC<{ onNext?: () => void }> = ({ onNext = () => {} }) => (
         </Text>
       </Checkbox>
     </FormControl>
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       py="1rem"
       mt={{ md: '40px' }}
@@ -95,7 +95,7 @@ const FullName: React.FC<{ onNext?: () => void }> = ({ onNext = () => {} }) => (
       mx="auto"
     >
       Continue
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 

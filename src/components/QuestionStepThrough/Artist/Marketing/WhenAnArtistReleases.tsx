@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const WhenAnArtistReleases: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
@@ -22,7 +22,7 @@ const WhenAnArtistReleases: React.FC<{ onNext?: () => void }> = ({
       These next questions will help make sure both parties are on board with
       how [song name] is going to be promoted.
     </Text>
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       py="1rem"
       mt={{ md: '40px' }}
@@ -36,7 +36,7 @@ const WhenAnArtistReleases: React.FC<{ onNext?: () => void }> = ({
       mx="auto"
     >
       Continue
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 

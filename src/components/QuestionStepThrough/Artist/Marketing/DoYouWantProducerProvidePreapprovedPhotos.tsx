@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, useDisclosure } from '@chakra-ui/react';
 import ChartaFormButton from '../../../common/forms/ChartaFormButton';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const DoYouWantProducerProvidePreapprovedPhotos: React.FC<{
   onNext?: (subStep?: string, prevStep?: string | number) => void;
@@ -46,7 +46,7 @@ const DoYouWantProducerProvidePreapprovedPhotos: React.FC<{
             Great! [Producer first name] will have 2 weeks to send those
             materials to [you].
           </Text>
-          <ChartaButton
+          <ChartaContinueButton
             px="4rem"
             py="1rem"
             mt={{ md: '40px' }}
@@ -60,7 +60,7 @@ const DoYouWantProducerProvidePreapprovedPhotos: React.FC<{
             mx="auto"
           >
             Continue
-          </ChartaButton>
+          </ChartaContinueButton>
         </>
       )}
     </>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, useDisclosure } from '@chakra-ui/react';
 import ChartaFormButton from '../../../common/forms/ChartaFormButton';
 import ResponsiveModal from '../../../common/ResponsiveModal';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const WhoIsGoingToRelease: React.FC<{
   onNext?: (subStep?: string, prevStep?: string | number) => void;
@@ -62,7 +62,7 @@ const WhoIsGoingToRelease: React.FC<{
           </>
         }
         footer={
-          <ChartaButton
+          <ChartaContinueButton
             px="4rem"
             w={{ base: 'full', md: 'auto' }}
             onClick={() => {
@@ -71,7 +71,7 @@ const WhoIsGoingToRelease: React.FC<{
             mx="auto"
           >
             Got it, thanks!
-          </ChartaButton>
+          </ChartaContinueButton>
         }
       />
     </>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, Text } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const MarketingDescription: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
@@ -13,7 +13,7 @@ const MarketingDescription: React.FC<{ onNext?: () => void }> = ({
     <Text as="p" textAlign="center" mt="20px" mb="30px">
       Get the hype train rolling.
     </Text>
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       onClick={() => {
         onNext();
@@ -25,7 +25,7 @@ const MarketingDescription: React.FC<{ onNext?: () => void }> = ({
       mx="auto"
     >
       Let&apos;s go
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const Indemnification: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
@@ -19,7 +19,7 @@ const Indemnification: React.FC<{ onNext?: () => void }> = ({
       If the other party uses a sample in [song name] with your knowledge, and
       the sample owners sue you, what happens next?
     </Text>
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       py="1rem"
       mt={{ md: '40px' }}
@@ -33,7 +33,7 @@ const Indemnification: React.FC<{ onNext?: () => void }> = ({
       mx="auto"
     >
       Continue
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 

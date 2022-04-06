@@ -5,7 +5,7 @@ import { FiChevronLeft } from 'react-icons/fi';
 import { useHistory } from 'react-router-dom';
 
 import { defaultOnboardedUser, onboardedUserAtomPersist } from '../../atoms';
-import ChartaButton from '../common/ChartaButton';
+import ChartaContinueButton from '../common/forms/ChartaContinueButton';
 
 const ChooseUserType: React.FC = () => {
   const [, setOnboardedUser] = useAtom(onboardedUserAtomPersist);
@@ -147,7 +147,7 @@ const HeresHowItWorks: React.FC = () => {
             create the contract, and all you&apos;ll have to do is sign it in
             Charta. That&apos;s moving at the speed of agreement!
           </Text>
-          <ChartaButton
+          <ChartaContinueButton
             mt={{ base: '174px', md: '30px' }}
             w={{ base: 'full', md: '223px' }}
             py="1.5rem"
@@ -157,7 +157,7 @@ const HeresHowItWorks: React.FC = () => {
             }}
           >
             Continue
-          </ChartaButton>
+          </ChartaContinueButton>
         </Flex>
       )}
       {onboardedUser.type === 'PRODUCER' && <Box />}

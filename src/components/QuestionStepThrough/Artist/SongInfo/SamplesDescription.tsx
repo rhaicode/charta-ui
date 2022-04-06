@@ -1,6 +1,6 @@
 import React from 'react';
 import { Flex, Image, Text } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const SamplesDescription: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
@@ -22,7 +22,7 @@ const SamplesDescription: React.FC<{ onNext?: () => void }> = ({
       Sometimes it&apos;s better to ask for permission than forgiveness,
       especially if you don&apos;t want to be sued for copyright infringement.
     </Text>
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       onClick={() => {
         onNext();
@@ -34,7 +34,7 @@ const SamplesDescription: React.FC<{ onNext?: () => void }> = ({
       mx="auto"
     >
       Continue
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 

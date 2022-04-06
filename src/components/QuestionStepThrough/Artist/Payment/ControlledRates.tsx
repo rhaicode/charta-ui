@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const ControlledRates: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
@@ -21,7 +21,7 @@ const ControlledRates: React.FC<{ onNext?: () => void }> = ({
       mechanical royalties on controlled compositions. This is the
       &quot;controlled rate.&quot;
     </Text>
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       py="1rem"
       mt={{ md: '40px' }}
@@ -35,7 +35,7 @@ const ControlledRates: React.FC<{ onNext?: () => void }> = ({
       mx="auto"
     >
       Continue
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 

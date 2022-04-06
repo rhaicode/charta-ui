@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const MechanicalRoyalties: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
@@ -25,7 +25,7 @@ const MechanicalRoyalties: React.FC<{ onNext?: () => void }> = ({
       Labels consider the $0.091 per track to be the “statutory minimum”
       mechanical royalty.
     </Text>
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       py="1rem"
       mt={{ md: '40px' }}
@@ -39,7 +39,7 @@ const MechanicalRoyalties: React.FC<{ onNext?: () => void }> = ({
       mx="auto"
     >
       Continue
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 

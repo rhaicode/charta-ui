@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Text } from '@chakra-ui/react';
 import { useAtom } from 'jotai';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 import { onboardedUserAtomPersist } from '../../../../atoms';
 
 const Audits: React.FC = () => {
@@ -39,7 +39,7 @@ const Audits: React.FC = () => {
         artist, though.
       </Text>
       <Box h="6rem" display={{ md: 'none' }} />
-      <ChartaButton
+      <ChartaContinueButton
         px="4rem"
         py="1rem"
         mt={{ md: '40px' }}
@@ -53,7 +53,7 @@ const Audits: React.FC = () => {
         mx="auto"
       >
         Continue
-      </ChartaButton>
+      </ChartaContinueButton>
     </>
   );
 };

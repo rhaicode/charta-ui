@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const NameImageLikeliness: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
@@ -18,7 +18,7 @@ const NameImageLikeliness: React.FC<{ onNext?: () => void }> = ({
       The next couple questions will help make sure that both parties agree on
       how those marketing materials will be created.
     </Text>
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       py="1rem"
       mt={{ md: '40px' }}
@@ -32,7 +32,7 @@ const NameImageLikeliness: React.FC<{ onNext?: () => void }> = ({
       mx="auto"
     >
       Continue
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 

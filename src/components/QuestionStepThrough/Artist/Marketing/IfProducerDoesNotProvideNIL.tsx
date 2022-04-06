@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, FormControl, Input, Text } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const IfProducerDoesNotProvideNIL: React.FC<{
   onNext?: (subStep?: string, prevStep?: string | number) => void;
@@ -42,7 +42,7 @@ const IfProducerDoesNotProvideNIL: React.FC<{
       />
     </FormControl>
     <Box h="8rem" display={{ md: 'none' }} />
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       py="1rem"
       mt={{ md: '40px' }}
@@ -56,7 +56,7 @@ const IfProducerDoesNotProvideNIL: React.FC<{
       mx="auto"
     >
       Continue
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 

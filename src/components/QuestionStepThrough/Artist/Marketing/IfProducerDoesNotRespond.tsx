@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, useDisclosure } from '@chakra-ui/react';
 import ChartaFormButton from '../../../common/forms/ChartaFormButton';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const IfProducerDoesNotRespond: React.FC<{
   onNext?: (subStep?: string, prevStep?: string | number) => void;
@@ -46,7 +46,7 @@ const IfProducerDoesNotRespond: React.FC<{
             This may prevent you from referencing [producer first name] in any
             marketing materials.
           </Text>
-          <ChartaButton
+          <ChartaContinueButton
             px="4rem"
             py="1rem"
             mt={{ md: '40px' }}
@@ -60,7 +60,7 @@ const IfProducerDoesNotRespond: React.FC<{
             mx="auto"
           >
             Continue
-          </ChartaButton>
+          </ChartaContinueButton>
         </>
       )}
     </>

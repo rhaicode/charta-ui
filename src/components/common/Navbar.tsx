@@ -38,13 +38,18 @@ const Navbar: React.FC<{ noHamburger?: boolean }> = ({ noHamburger }) => (
     <Flex display={{ base: 'none', md: 'flex' }}>
       <Box mr="24px">
         <Link to="/login">
-          <Button variant="ghost" fontWeight="500">
+          <Button
+            variant="ghost"
+            fontWeight="500"
+            _hover={{ color: 'base-primary-green', backgroundColor: 'white' }}
+            _active={{ color: 'base-primary-green', backgroundColor: 'white' }}
+          >
             Login
           </Button>
         </Link>
       </Box>
       <Link to="/signup">
-        <ChartaButton px="2rem">Sign up</ChartaButton>
+        <ChartaButton px="2rem">Sign up now</ChartaButton>
       </Link>
     </Flex>
     {!noHamburger && (
@@ -64,7 +69,7 @@ const Navbar: React.FC<{ noHamburger?: boolean }> = ({ noHamburger }) => (
               <Link to="/login">Login</Link>
             </MenuItem>
             <MenuItem>
-              <Link to="/signup">Sign up</Link>
+              <Link to="/signup">Sign up now</Link>
             </MenuItem>
           </MenuList>
         </Menu>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const WhyShouldDoContract: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
@@ -26,7 +26,7 @@ const WhyShouldDoContract: React.FC<{ onNext?: () => void }> = ({
       of the master so that they can control when and where the song is released
       and other uses of the song.
     </Text>
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       py="1rem"
       mt={{ md: '40px' }}
@@ -40,7 +40,7 @@ const WhyShouldDoContract: React.FC<{ onNext?: () => void }> = ({
       mx="auto"
     >
       Continue
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 

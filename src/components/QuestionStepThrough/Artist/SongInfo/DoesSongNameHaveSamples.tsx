@@ -3,7 +3,7 @@ import { Text, useDisclosure } from '@chakra-ui/react';
 
 import { useAtom } from 'jotai';
 import ChartaFormButton from '../../../common/forms/ChartaFormButton';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 import { onboardedUserAtomPersist } from '../../../../atoms';
 
 const DoesSongNameHaveSamples: React.FC<{
@@ -99,7 +99,7 @@ const DoesSongNameHaveSamples: React.FC<{
         </Text>
       )}
       {(isOpenYes || isOpenIdk) && (
-        <ChartaButton
+        <ChartaContinueButton
           px="4rem"
           py="1rem"
           mt={{ md: '30px' }}
@@ -113,7 +113,7 @@ const DoesSongNameHaveSamples: React.FC<{
           bottom={{ base: '0px', md: 'auto' }}
         >
           Continue
-        </ChartaButton>
+        </ChartaContinueButton>
       )}
     </>
   );

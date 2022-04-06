@@ -16,7 +16,7 @@ import Navbar from '../components/common/Navbar';
 
 const Signup: React.FC = () => (
   <Box
-    backgroundColor="base-dark-green-1"
+    background="linear-gradient(180deg, rgba(50, 61, 97, 0) 0%, #323D61 100%), url('/assets/background-texture.png');"
     minH="100vh"
     position="relative"
     pt={{ base: '12px', md: '27px' }}
@@ -27,7 +27,7 @@ const Signup: React.FC = () => (
       <Navbar noHamburger />
       <Box
         mt={{ base: '40px', md: '80px' }}
-        backgroundColor="base-light-green"
+        backgroundColor="rgba(255,255,255,0.1)"
         minH={{ base: '80vh', md: '0px' }}
         p={{ base: '40px', md: '60px' }}
         maxW="466px"
@@ -51,10 +51,19 @@ const Signup: React.FC = () => (
                 color: '#FFFFFF',
                 opacity: '0.6',
               }}
+              variant="flushed"
             />
           </FormControl>
-          <PasswordField mt="40px" placeholder="Enter password" />
-          <PasswordField mt="40px" placeholder="Re-enter password" />
+          <PasswordField
+            mt="40px"
+            placeholder="Enter password"
+            inputVariant="flushed"
+          />
+          <PasswordField
+            mt="40px"
+            placeholder="Re-enter password"
+            inputVariant="flushed"
+          />
           <Link to="/get-started">
             <ChartaButton w="full" mt="40px">
               Sign up

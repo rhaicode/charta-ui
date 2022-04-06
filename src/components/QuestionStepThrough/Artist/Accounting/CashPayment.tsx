@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text } from '@chakra-ui/react';
-import ChartaButton from '../../../common/ChartaButton';
+import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
 
 const CashPayment: React.FC<{ onNext?: () => void }> = ({
   onNext = () => {},
@@ -24,7 +24,7 @@ const CashPayment: React.FC<{ onNext?: () => void }> = ({
       If the final master has already been accepted, then you&apos;ll need to
       pay [producer first name] within 7 days of signing the contract.
     </Text>
-    <ChartaButton
+    <ChartaContinueButton
       px="4rem"
       py="1rem"
       mt={{ md: '40px' }}
@@ -38,7 +38,7 @@ const CashPayment: React.FC<{ onNext?: () => void }> = ({
       mx="auto"
     >
       Continue
-    </ChartaButton>
+    </ChartaContinueButton>
   </>
 );
 
