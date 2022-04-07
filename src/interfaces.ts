@@ -3,5 +3,6 @@ export type OnboardedUser = {
   step: number | string;
   subStep: number | string;
   prevSubStep: number | string;
-  paths: string[];
+  isReviewing: boolean;
+  reviewingStep: number;
 };

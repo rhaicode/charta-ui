@@ -20,12 +20,6 @@ const ReviewContract: React.FC = () => {
     window.scrollTo(0, 0);
   };
 
-  const preferredMaxWidthOnSubStep: Record<string, string> = {
-    6: '330px',
-    9: '350px',
-    10: '350px',
-  };
-
   return (
     <Flex mt="40px">
       <Flex
@@ -35,7 +29,7 @@ const ReviewContract: React.FC = () => {
         color="base-primary-green"
         maxW={{
           base: '300px',
-          md: preferredMaxWidthOnSubStep[onboardedUser.subStep] ?? '463px',
+          md: '463px',
         }}
         mx="auto"
       >

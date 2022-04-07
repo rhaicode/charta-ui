@@ -43,7 +43,7 @@ const DottedBreadCrumb: React.FC<
         };
 
         return (
-          <Box pos="relative">
+          <Box pos="relative" key={s[1].name}>
             <Flex maxW="max-content" alignItems="center">
               <Flex direction="column" maxW="max-content" alignItems="center">
                 {isValidBreadcrumb && (
