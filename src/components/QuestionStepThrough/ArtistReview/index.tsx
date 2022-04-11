@@ -64,6 +64,8 @@ const ArtistReview: React.FC = () => {
         step: 7,
         subStep: 1,
         isReviewing: false,
+        reviewingStep: 0,
+        paymentStep: 0,
       });
       history.push('/step-through');
     } else {
@@ -105,8 +107,11 @@ const ArtistReview: React.FC = () => {
         </Box>
       </Flex>
       {React.cloneElement(
-        stepsComponent[onboardedUser.reviewingStep as number]
-          .component as ReactElement<any, string | JSXElementConstructor<any>>,
+        (stepsComponent[onboardedUser.reviewingStep as number]
+          ?.component as ReactElement<
+          any,
+          string | JSXElementConstructor<any>
+        >) || <Box />,
         { onNext }
       )}
     </Box>

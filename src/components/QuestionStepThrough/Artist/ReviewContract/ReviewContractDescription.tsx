@@ -26,13 +26,17 @@ const ReviewContractDescription: React.FC = () => {
             ...onboardedUser,
             isReviewing: true,
             reviewingStep: 1,
+            step: 0,
+            subStep: 0,
+            prevSubStep: 0,
+            paymentStep: 0,
           });
           history.push('/review');
         }}
         position={{ base: 'absolute', md: 'relative' }}
         bottom={{ base: '0px', md: 'auto' }}
         mb={{ base: '40px', md: '0px' }}
-        w={{ base: '80vw', md: 'auto' }}
+        w={{ base: '83vw', md: 'auto' }}
         mx="auto"
       >
         Start review

@@ -29,6 +29,9 @@ export const defaultOnboardedUser: OnboardedUser = {
   prevSubStep: 0,
   isReviewing: false,
   reviewingStep: 0,
+  isPaying: false,
+  paymentStep: 0,
+  isContractSent: false,
 };
 
 export const onboardedUserAtomPersist = atomWithLocalStorage<OnboardedUser>(

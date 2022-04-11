@@ -111,7 +111,7 @@ const ArtistSteps: React.FC = () => {
           letterSpacing="0.08em"
         >
           {onboardedUser.step < 7 ? `Step ${onboardedUser.step}: ` : ''}
-          {stepsComponent[onboardedUser.step as number].name}
+          {stepsComponent[onboardedUser.step as number]?.name}
         </Text>
         <Box
           position="absolute"
@@ -125,10 +125,11 @@ const ArtistSteps: React.FC = () => {
       </Flex>
       <DottedBreadCrumb steps={stepsComponent} mt="24px" />
       {React.cloneElement(
-        stepsComponent[onboardedUser.step as number].component as ReactElement<
+        (stepsComponent[onboardedUser.step as number]
+          ?.component as ReactElement<
           any,
           string | JSXElementConstructor<any>
-        >
+        >) || <Box />
       )}
     </Box>
   );

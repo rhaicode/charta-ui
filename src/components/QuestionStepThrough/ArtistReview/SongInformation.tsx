@@ -189,8 +189,17 @@ const SongInformation: React.FC<{ onNext?: () => void }> = ({ onNext }) => (
         mt="-0.65rem"
       />
     </Box>
+    <Box h="4rem" display={{ md: 'none' }} />
     <Flex mt="30px" justifyContent="center">
-      <ChartaContinueButton px="2rem" onClick={onNext}>
+      <ChartaContinueButton
+        px="2rem"
+        position={{ base: 'absolute', md: 'relative' }}
+        bottom={{ base: '0px', md: 'auto' }}
+        mb={{ base: '40px', md: '0px' }}
+        w={{ base: '83vw', md: 'auto' }}
+        mx="auto"
+        onClick={onNext}
+      >
         Review next section
       </ChartaContinueButton>
     </Flex>

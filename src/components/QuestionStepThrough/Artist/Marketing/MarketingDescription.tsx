@@ -21,7 +21,7 @@ const MarketingDescription: React.FC<{ onNext?: () => void }> = ({
       position={{ base: 'absolute', md: 'relative' }}
       bottom={{ base: '0px', md: 'auto' }}
       mb={{ base: '40px', md: '0px' }}
-      w={{ base: '80vw', md: 'auto' }}
+      w={{ base: '83vw', md: 'auto' }}
       mx="auto"
     >
       Let&apos;s go

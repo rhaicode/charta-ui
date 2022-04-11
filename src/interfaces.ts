@@ -5,4 +5,7 @@ export type OnboardedUser = {
   prevSubStep: number | string;
   isReviewing: boolean;
   reviewingStep: number;
+  isPaying: boolean;
+  paymentStep: number;
+  isContractSent: boolean;
 };

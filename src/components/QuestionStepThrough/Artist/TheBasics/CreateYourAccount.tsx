@@ -141,7 +141,7 @@ const CreateYourAccount: React.FC = () => {
         onClick={onOpen}
         position={{ base: 'absolute', md: 'relative' }}
         bottom={{ base: '0px', md: 'auto' }}
-        w={{ base: '80vw', md: 'auto' }}
+        w={{ base: '83vw', md: 'auto' }}
         ml={{ base: 'auto', md: '0px' }}
       >
         Create Account

@@ -59,7 +59,7 @@ const PostRecoupment: React.FC<{ onNext?: () => void }> = ({
       }}
       position={{ base: 'absolute', md: 'relative' }}
       bottom={{ base: '0px', md: 'auto' }}
-      w={{ base: '80vw', md: 'auto' }}
+      w={{ base: '83vw', md: 'auto' }}
       mx="auto"
     >
       Continue
