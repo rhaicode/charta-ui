@@ -1,0 +1,38 @@
+import React from 'react';
+import { Text } from '@chakra-ui/react';
+import ChartaFormButton from '../../../common/forms/ChartaFormButton';
+
+const IfYoureSuedBecauseTheOtherParty: React.FC<{
+  onNext?: (subStep?: string, prevStep?: string | number) => void;
+}> = ({ onNext = () => {} }) => (
+  <>
+    <Text
+      as="p"
+      fontSize={{ base: 'lg', md: 'xl' }}
+      lineHeight="28px"
+      fontWeight="500"
+      mr="auto"
+    >
+      If you&apos;re sued because the other party used a sample without
+      permission, do you want them to indemnify you?
+    </Text>
+    <ChartaFormButton
+      mt="30px"
+      onClick={() => {
+        onNext();
+      }}
+    >
+      Yes
+    </ChartaFormButton>
+    <ChartaFormButton
+      mt="20px"
+      onClick={() => {
+        onNext();
+      }}
+    >
+      No
+    </ChartaFormButton>
+  </>
+);
+
+export default IfYoureSuedBecauseTheOtherParty;

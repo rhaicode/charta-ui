@@ -111,56 +111,88 @@ const HeresHowItWorks: React.FC = () => {
   const [onboardedUser, setOnBoardedUser] = useAtom(onboardedUserAtomPersist);
   return (
     <Box mt={{ base: '30px', md: '50px' }}>
-      {onboardedUser.type === 'ARTIST' && (
-        <Flex
-          direction="column"
-          mx="auto"
-          color="base-primary-green"
-          maxW="max-content"
-          alignItems="center"
+      <Flex
+        direction="column"
+        mx="auto"
+        color="base-primary-green"
+        alignItems="center"
+        maxW="45ch"
+      >
+        {onboardedUser.type === 'ARTIST' && (
+          <>
+            <Image
+              src="/assets/musical-notes-1.png"
+              display={{ base: 'none', md: 'block' }}
+            />
+            <Image
+              src="/assets/musical-notes-1-mobile.png"
+              display={{ md: 'none' }}
+            />
+          </>
+        )}
+        {onboardedUser.type === 'PRODUCER' && (
+          <>
+            <Image
+              src="/assets/producer-music.png"
+              display={{ base: 'none', md: 'block' }}
+            />
+            <Image
+              src="/assets/musical-notes-1-mobile.png"
+              display={{ md: 'none' }}
+            />
+          </>
+        )}
+        <Text
+          as="p"
+          fontSize="20px"
+          lineHeight="28px"
+          fontWeight={{ base: '700', md: '500' }}
+          mt={{ base: '30px', md: '25px' }}
+          mb={{ base: '20px' }}
         >
-          <Image
-            src="/assets/musical-notes-1.png"
-            display={{ base: 'none', md: 'block' }}
-          />
-          <Image
-            src="/assets/musical-notes-1-mobile.png"
-            display={{ md: 'none' }}
-          />
-          <Text
-            as="p"
-            fontSize="20px"
-            lineHeight="28px"
-            fontWeight={{ base: '700', md: '500' }}
-            mt={{ base: '30px', md: '25px' }}
-            mb={{ base: '20px' }}
-          >
-            Great! You&apos;re the artist. Here&apos;s how it works.
-          </Text>
-          <Text as="p">
-            We&apos;ve built a platform that will let you easily create, send,
-            and negotiate an offer with your producer, all in plain English, all
-            for $50.
-          </Text>
-          <Text as="p" mt={{ base: '2rem', md: '1.5rem' }}>
-            Once you and your producer have agreed on everything, we&apos;ll
-            create the contract, and all you&apos;ll have to do is sign it in
-            Charta. That&apos;s moving at the speed of agreement!
-          </Text>
-          <ChartaContinueButton
-            mt={{ base: '174px', md: '30px' }}
-            w={{ base: 'full', md: '223px' }}
-            py="1.5rem"
-            onClick={() => {
-              setOnBoardedUser({ ...onboardedUser, step: 1, subStep: 1 });
-              history.push('/step-through');
-            }}
-          >
-            Continue
-          </ChartaContinueButton>
-        </Flex>
-      )}
-      {onboardedUser.type === 'PRODUCER' && <Box />}
+          Great! You&apos;re the {onboardedUser.type?.toLowerCase()}.
+          Here&apos;s how it works.
+        </Text>
+        {onboardedUser.type === 'ARTIST' && (
+          <>
+            <Text as="p">
+              We&apos;ve built a platform that will let you easily create, send,
+              and negotiate an offer with your producer, all in plain English,
+              all for $50.
+            </Text>
+            <Text as="p" mt={{ base: '2rem', md: '1.5rem' }}>
+              Once you and your producer have agreed on everything, we&apos;ll
+              create the contract, and all you&apos;ll have to do is sign it in
+              Charta. That&apos;s moving at the speed of agreement!
+            </Text>
+          </>
+        )}
+        {onboardedUser.type === 'PRODUCER' && (
+          <>
+            <Text as="p">
+              We&apos;ve built a platform that will let you easily create, send,
+              and negotiate an offer with the artist, all in plain English, all
+              for $50.
+            </Text>
+            <Text as="p" mt={{ base: '2rem', md: '1.5rem' }}>
+              Once you and the artist have agreed on everything, we&apos;ll
+              create the contract, and all you&apos;ll have to do is sign it in
+              Charta. That&apos;s moving at the speed of agreement!
+            </Text>
+          </>
+        )}
+        <ChartaContinueButton
+          mt={{ base: '174px', md: '30px' }}
+          w={{ base: 'full', md: '223px' }}
+          py="1.5rem"
+          onClick={() => {
+            setOnBoardedUser({ ...onboardedUser, step: 1, subStep: 1 });
+            history.push('/step-through');
+          }}
+        >
+          Continue
+        </ChartaContinueButton>
+      </Flex>
     </Box>
   );
 };

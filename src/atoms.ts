@@ -38,3 +38,5 @@ export const onboardedUserAtomPersist = atomWithLocalStorage<OnboardedUser>(
   'onboarded-user',
   defaultOnboardedUser
 );
+
+export const fromPaymentScreenAtom = atom<boolean>(false);

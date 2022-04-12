@@ -5,6 +5,7 @@ import React from 'react';
 import { onboardedUserAtomPersist } from '../atoms';
 import Navbar from '../components/common/Navbar';
 import ArtistSteps from '../components/QuestionStepThrough/Artist/index';
+import ProducerSteps from '../components/QuestionStepThrough/Producer/index';
 
 const StepThrough: React.FC = () => {
   const [onboardedUser] = useAtom(onboardedUserAtomPersist);
@@ -29,6 +30,7 @@ const StepThrough: React.FC = () => {
         mx="auto"
       >
         {onboardedUser.type === 'ARTIST' && <ArtistSteps />}
+        {onboardedUser.type === 'PRODUCER' && <ProducerSteps />}
       </Box>
     </Box>
   );

@@ -1,4 +1,4 @@
-import { Flex } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import { useAtom } from 'jotai';
 import React, { JSXElementConstructor, ReactElement, ReactNode } from 'react';
 import { onboardedUserAtomPersist } from '../../../../atoms';
@@ -53,10 +53,10 @@ const TheBasics: React.FC = () => {
         mx="auto"
       >
         {React.cloneElement(
-          subSteps[`${onboardedUser.subStep}`] as ReactElement<
+          (subSteps[`${onboardedUser.subStep}`] as ReactElement<
             any,
             string | JSXElementConstructor<any>
-          >,
+          >) || <Box />,
           {
             onNext,
           }

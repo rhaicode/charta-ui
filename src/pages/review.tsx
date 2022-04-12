@@ -4,7 +4,9 @@ import React from 'react';
 
 import { onboardedUserAtomPersist } from '../atoms';
 import Navbar from '../components/common/Navbar';
+
 import ArtistReview from '../components/QuestionStepThrough/ArtistReview';
+import ProducerReview from '../components/QuestionStepThrough/ProducerReview';
 
 const Review: React.FC = () => {
   const [onboardedUser] = useAtom(onboardedUserAtomPersist);
@@ -29,6 +31,7 @@ const Review: React.FC = () => {
         mx="auto"
       >
         {onboardedUser.type === 'ARTIST' && <ArtistReview />}
+        {onboardedUser.type === 'PRODUCER' && <ProducerReview />}
       </Box>
     </Box>
   );

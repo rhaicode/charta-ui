@@ -28,7 +28,8 @@ const PaymentPage: React.FC = () => {
         mt={{ md: '35px' }}
         mx="auto"
       >
-        {onboardedUser.type === 'ARTIST' && <Payment />}
+        {(onboardedUser.type === 'ARTIST' ||
+          onboardedUser.type === 'PRODUCER') && <Payment />}
       </Box>
     </Box>
   );

@@ -1,14 +1,15 @@
 import { Text, Image, useDisclosure, Button } from '@chakra-ui/react';
-import { useLocation } from 'react-router-dom';
+import { useAtom } from 'jotai';
+import { fromPaymentScreenAtom } from '../../atoms';
 import ChartaContinueButton from '../common/forms/ChartaContinueButton';
 
 const ContractSent: React.FC = () => {
   const { isOpen, onOpen } = useDisclosure();
-  const location = useLocation();
+  const [fromPaymentScreen] = useAtom(fromPaymentScreenAtom);
 
   return (
     <>
-      {(!(location.state as any)?.fromPaymentScreen || isOpen) && (
+      {(!fromPaymentScreen || isOpen) && (
         <>
           <Image
             src="/assets/check-icon.png"
@@ -36,7 +37,7 @@ const ContractSent: React.FC = () => {
           </Button>
         </>
       )}
-      {(location.state as any)?.fromPaymentScreen && !isOpen && (
+      {fromPaymentScreen && !isOpen && (
         <>
           <Image
             src="/assets/payments-statements-logo.png"

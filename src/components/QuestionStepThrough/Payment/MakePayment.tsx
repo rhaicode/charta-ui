@@ -10,7 +10,11 @@ import {
 import { useAtom } from 'jotai';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { defaultOnboardedUser, onboardedUserAtomPersist } from '../../../atoms';
+import {
+  defaultOnboardedUser,
+  fromPaymentScreenAtom,
+  onboardedUserAtomPersist,
+} from '../../../atoms';
 import ChartaContinueButton from '../../common/forms/ChartaContinueButton';
 
 const MakePaymentComponent: React.FC<{
@@ -114,6 +118,7 @@ const MakePaymentComponent: React.FC<{
 const MakePayment: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const history = useHistory();
+  const [, setFromPaymentScreen] = useAtom(fromPaymentScreenAtom);
 
   const [, setOnboardedUser] = useAtom(onboardedUserAtomPersist);
 
@@ -123,12 +128,8 @@ const MakePayment: React.FC = () => {
     setTimeout(() => {
       setLoading(false);
       setOnboardedUser({ ...defaultOnboardedUser, isContractSent: true });
-      history.push({
-        pathname: '/contract-sent',
-        state: {
-          fromPaymentScreen: true,
-        },
-      });
+      setFromPaymentScreen(true);
+      history.push('/contract-sent');
       window.scrollTo(0, 0);
     }, 3000);
   };
