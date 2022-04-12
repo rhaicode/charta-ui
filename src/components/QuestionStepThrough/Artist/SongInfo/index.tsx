@@ -45,7 +45,7 @@ const SongInfo: React.FC = () => {
   const preferredMaxWidthOnSubStep: Record<string, string> = {
     1: '405px',
     7: '385px',
-    '5b': '455px',
+    '4b': '455px',
   };
 
   return (

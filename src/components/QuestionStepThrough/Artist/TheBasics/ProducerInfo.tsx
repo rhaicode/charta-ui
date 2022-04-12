@@ -1,20 +1,22 @@
 import React from 'react';
-import {
-  Text,
-  Input,
-  FormControl,
-  FormLabel,
-  useDisclosure,
-  Button,
-  Flex,
-} from '@chakra-ui/react';
+import { Text, Input, FormControl, FormLabel } from '@chakra-ui/react';
+import { useAtom } from 'jotai';
 import ChartaContinueButton from '../../../common/forms/ChartaContinueButton';
-import ResponsiveModal from '../../../common/ResponsiveModal';
+import { onboardedUserAtomPersist } from '../../../../atoms';
 
-const ProducerInfo: React.FC<{ onNext?: () => void }> = ({
-  onNext = () => {},
-}) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+const ProducerInfo: React.FC<{ onNext?: () => void }> = () => {
+  const [onboardedUser, setOnboardedUser] = useAtom(onboardedUserAtomPersist);
+
+  const onNextStep = () => {
+    setOnboardedUser({
+      ...onboardedUser,
+      step: 2,
+      subStep: 1,
+      prevSubStep: 5,
+    });
+    window.scrollTo(0, 0);
+  };
+
   return (
     <>
       <Text
@@ -67,7 +69,7 @@ const ProducerInfo: React.FC<{ onNext?: () => void }> = ({
         py="1rem"
         mt={{ md: '40px' }}
         mb={{ base: '40px', md: '0px' }}
-        onClick={onOpen}
+        onClick={onNextStep}
         position={{ base: 'absolute', md: 'relative' }}
         bottom={{ base: '0px', md: 'auto' }}
         w={{ base: '83vw', md: 'auto' }}
@@ -75,43 +77,6 @@ const ProducerInfo: React.FC<{ onNext?: () => void }> = ({
       >
         Continue
       </ChartaContinueButton>
-      <ResponsiveModal
-        minW={{ base: '100vw', md: '466px' }}
-        minH={{ base: '100vh', md: ' 360px' }}
-        padding={{ base: '20px', md: '30px' }}
-        isOpen={isOpen}
-        onClose={onClose}
-        title="Are you sure you want to leave?"
-        body={
-          <Text as="p" lineHeight="24px" mt="0px">
-            All progress you have made will be lost if you do not create an
-            account.
-          </Text>
-        }
-        footer={
-          <Flex direction="column" alignItems="center" w="full">
-            <ChartaContinueButton
-              w={{ base: 'full', md: '224px' }}
-              onClick={() => {
-                onNext();
-              }}
-            >
-              Create an account
-            </ChartaContinueButton>
-            <Button
-              mt="20px"
-              w={{ base: 'full', md: '224px' }}
-              onClick={() => {
-                onClose();
-              }}
-              border="1px solid"
-              borderColor="base-primary-green"
-            >
-              Exit
-            </Button>
-          </Flex>
-        }
-      />
     </>
   );
 };

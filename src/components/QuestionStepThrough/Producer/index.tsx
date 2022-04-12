@@ -73,6 +73,20 @@ const ArtistSteps: React.FC = () => {
         Number(onboardedUser.subStep) === 1 &&
         Number(onboardedUser.prevSubStep) === 0;
 
+      if (
+        onboardedUser.hasAccountCreated &&
+        ((onboardedUser.step === 6 && onboardedUser.subStep === 1) ||
+          isInvalidPrevSubstep)
+      ) {
+        setOnboardedUser({
+          ...onboardedUser,
+          step: 5,
+          subStep: 13,
+          hasAccountCreated: true,
+        });
+        return;
+      }
+
       const calculatedSubstep = Number(onboardedUser.prevSubStep)
         ? onboardedUser.prevSubStep
         : +onboardedUser.subStep - 1;

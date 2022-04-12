@@ -2,8 +2,6 @@ import { Box, Flex } from '@chakra-ui/react';
 import { useAtom } from 'jotai';
 import React, { JSXElementConstructor, ReactElement, ReactNode } from 'react';
 import { onboardedUserAtomPersist } from '../../../../atoms';
-import CreateAnAccount from './CreateAnAccount';
-import CreateYourAccount from './CreateYourAccount';
 import DoYouHaveLoanoutCompany from './DoYouHaveLoanoutCompany';
 import FullName from './FullName';
 import NameOfSong from './NameOfSong';
@@ -15,11 +13,9 @@ const subSteps: Record<string, ReactNode> = {
   1: <TheBasicsDescription />,
   2: <NameOfSong />,
   3: <FullName />,
-  4: <CreateAnAccount />,
-  5: <DoYouHaveLoanoutCompany />,
-  '5b': <TellUsAboutYourLoanoutCompany />,
-  6: <ArtistInfo />,
-  7: <CreateYourAccount />,
+  4: <DoYouHaveLoanoutCompany />,
+  '4b': <TellUsAboutYourLoanoutCompany />,
+  5: <ArtistInfo />,
 };
 
 const TheBasics: React.FC = () => {

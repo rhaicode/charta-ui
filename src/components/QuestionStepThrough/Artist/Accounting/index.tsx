@@ -2,6 +2,7 @@ import { Box, Flex } from '@chakra-ui/react';
 import { useAtom } from 'jotai';
 import React, { JSXElementConstructor, ReactElement, ReactNode } from 'react';
 import { onboardedUserAtomPersist } from '../../../../atoms';
+import CreateYourAccount from './CreateYourAccount';
 import AccountingDescription from './AccountingDescription';
 import AdvancesRoyalties from './AdvancesRoyalties';
 import AfterAllTheRecordingCosts from './AfterAllTheRecordingCosts';
@@ -32,6 +33,7 @@ const subSteps: Record<string, ReactNode> = {
   12: <Payments />,
   13: <Statements />,
   14: <Audits />,
+  15: <CreateYourAccount />,
 };
 
 const Accounting: React.FC = () => {

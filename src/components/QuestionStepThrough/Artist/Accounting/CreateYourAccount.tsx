@@ -22,9 +22,10 @@ const CreateYourAccount: React.FC = () => {
   const onNextStep = () => {
     setOnboardedUser({
       ...onboardedUser,
-      step: 2,
+      step: 6,
       subStep: 1,
-      prevSubStep: 7,
+      prevSubStep: 14,
+      hasAccountCreated: true,
     });
     window.scrollTo(0, 0);
   };

@@ -32,6 +32,7 @@ export const defaultOnboardedUser: OnboardedUser = {
   isPaying: false,
   paymentStep: 0,
   isContractSent: false,
+  hasAccountCreated: false,
 };
 
 export const onboardedUserAtomPersist = atomWithLocalStorage<OnboardedUser>(

@@ -8,4 +8,5 @@ export type OnboardedUser = {
   isPaying: boolean;
   paymentStep: number;
   isContractSent: boolean;
+  hasAccountCreated: boolean;
 };

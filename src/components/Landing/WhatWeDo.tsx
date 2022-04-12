@@ -36,7 +36,15 @@ const WhatWeDo: React.FC = () => (
       reality, sign up below to receive updates and a discount code for your
       first contract when we launch!
     </Text>
-    <ChartaButton mt="40px" px="4rem">
+    <ChartaButton
+      mt="40px"
+      px="4rem"
+      onClick={() => {
+        document
+          .querySelector('.preregister')!
+          .scrollIntoView({ behavior: 'smooth' });
+      }}
+    >
       Sign up now
     </ChartaButton>
   </Box>

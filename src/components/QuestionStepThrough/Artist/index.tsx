@@ -26,7 +26,7 @@ const stepsComponent: Record<
   1: {
     name: 'The Basics',
     component: <TheBasics />,
-    lastSubstep: 7,
+    lastSubstep: 5,
   },
   2: {
     name: 'Song Information',
@@ -47,7 +47,7 @@ const stepsComponent: Record<
   5: {
     name: 'Accounting',
     component: <Accounting />,
-    lastSubstep: 14,
+    lastSubstep: 15,
   },
   6: {
     name: 'Legal',
@@ -72,6 +72,20 @@ const ArtistSteps: React.FC = () => {
       const isInvalidPrevSubstep =
         Number(onboardedUser.subStep) === 1 &&
         Number(onboardedUser.prevSubStep) === 0;
+
+      if (
+        onboardedUser.hasAccountCreated &&
+        ((onboardedUser.step === 6 && onboardedUser.subStep === 1) ||
+          isInvalidPrevSubstep)
+      ) {
+        setOnboardedUser({
+          ...onboardedUser,
+          step: 5,
+          subStep: 14,
+          hasAccountCreated: true,
+        });
+        return;
+      }
 
       const calculatedSubstep = Number(onboardedUser.prevSubStep)
         ? onboardedUser.prevSubStep

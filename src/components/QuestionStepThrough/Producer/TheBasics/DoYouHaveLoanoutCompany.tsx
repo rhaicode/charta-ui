@@ -37,7 +37,7 @@ const DoYouHaveLoanoutCompany: React.FC<{
       <ChartaFormButton
         mt="30px"
         onClick={() => {
-          onNext('5b', 5);
+          onNext('4b', 5);
         }}
       >
         Yes

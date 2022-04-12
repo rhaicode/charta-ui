@@ -8,6 +8,7 @@ import AfterAllTheRecordingCosts from './AfterAllTheRecordingCosts';
 import Audits from './Audits';
 import CashPayment from './CashPayment';
 import CashPaymentCanBeOneFee from './CashPaymentCanBeOneFee';
+import CreateYourAccount from './CreateYourAccount';
 import Payments from './Payments';
 import PaymentsAndStatements from './PaymentsAndStatements';
 import PostRecoupment from './PostRecoupment';
@@ -30,6 +31,7 @@ const subSteps: Record<string, ReactNode> = {
   11: <Payments />,
   12: <Statements />,
   13: <Audits />,
+  14: <CreateYourAccount />,
 };
 
 const Accounting: React.FC = () => {

@@ -56,7 +56,7 @@ const TellUsAboutYourLoanoutCompany: React.FC<{
       mt={{ md: '40px' }}
       mb={{ base: '40px', md: '0px' }}
       onClick={() => {
-        onNext(6);
+        onNext(5);
       }}
       position={{ base: 'absolute', md: 'relative' }}
       bottom={{ base: '0px', md: 'auto' }}
